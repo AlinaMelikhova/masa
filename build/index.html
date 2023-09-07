@@ -9,6 +9,12 @@
       content="«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут."
     />
     <title>MASA</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="css/style.min.css" />
     <link
       rel="preload"
@@ -547,10 +553,419 @@
                     </li>
                   </ul>
                 </div>
+                <div data-tabs="content" class="news__tabs-wrapper">
+                  <ul class="news__list" data-tabs="element">
+                    <li class="news__item">
+                      <div class="news__item-block">
+                        <span>17/03/2023</span>
+                        <h3>Новая программа волонтёрства</h3>
+                        <div class="description-wrapper">
+                          <p>
+                            Программа помощи детям длительностью 4&nbsp;месяца
+                          </p>
+                          <a class="news__link-icon arrow-button" href="#"></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div data-tabs="content" class="news__tabs-wrapper">
+                  <ul class="news__list" data-tabs="element">
+                    <li class="news__item">
+                      <div class="news__item-block">
+                        <span>23/03/2023</span>
+                        <h3>Интервью с&nbsp;участницей программы стажировки</h3>
+                        <div class="description-wrapper">
+                          <p>
+                            Саша рассказывает, как попала в&nbsp;программу
+                            и&nbsp;как прошла 6-месячная стажировка
+                            в&nbsp;ISOFound
+                          </p>
+                          <a class="news__link-icon arrow-button" href="#"></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div data-tabs="content" class="news__tabs-wrapper">
+                  <ul class="news__list" data-tabs="element">
+                    <li class="news__item">
+                      <div class="news__item-block">
+                        <span>10/03/2023</span>
+                        <h3>Построй свою карьеру</h3>
+                        <div class="description-wrapper">
+                          <p>
+                            Ведущие компании готовы трудоустроить выпускников
+                            стажировки
+                          </p>
+                          <a class="news__link-icon arrow-button" href="#"></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div data-tabs="content" class="news__tabs-wrapper">
+                  <ul class="news__list" data-tabs="element">
+                    <li class="news__item">
+                      <div class="news__item-block">
+                        <span>20/03/2023</span>
+                        <h3>Путешествуем по&nbsp;Израилю</h3>
+                        <div class="description-wrapper">
+                          <p>Какие места посещают наши студенты весной</p>
+                          <a class="news__link-icon arrow-button" href="#"></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-button-wrapper swiper-button-wrapper--news">
+                <div
+                  class="swiper-button swiper-button-prev swiper-button-prev--news"
+                ></div>
+                <ul class="news__pagination-list">
+                  <li
+                    class="news__pagination-item news__pagination-item--active"
+                  >
+                    1
+                  </li>
+                  <li class="news__pagination-item">2</li>
+                  <li class="news__pagination-item">3</li>
+                  <li class="news__pagination-item">4</li>
+                </ul>
+                <div
+                  class="swiper-button swiper-button-next swiper-button-next--news"
+                ></div>
               </div>
             </div>
           </div>
         </section>
+        <section class="faq" id="faq">
+          <div class="faq__container container">
+            <div class="faq__wrapper wrapper">
+              <h2 class="faq__title section-title">Вопросы и ответы</h2>
+              <ul class="faq__list" data-accordion="parent">
+                <li class="faq__item" data-accordion="element">
+                  <div class="faq__title-container">
+                    <h3>Кто организатор? Какие сроки у&nbsp;программы?</h3>
+                    <button
+                      class="faq__button"
+                      title="показать больше"
+                      data-accordion="button"
+                      type="button"
+                    ></button>
+                  </div>
+                  <p data-accordion="content">
+                    Организатором программы является проект &laquo;Маса&raquo;
+                    в&nbsp;сотрудничестве с&nbsp;образовательными учреждениями.
+                    Сроки программы обмена могут варьироваться от&nbsp;одного
+                    семестра до&nbsp;года.
+                  </p>
+                </li>
+                <li class="faq__item" data-accordion="element">
+                  <div class="faq__title-container">
+                    <h3>Что такое грант на&nbsp;обучение?</h3>
+                    <button
+                      class="faq__button"
+                      title="показать больше"
+                      data-accordion="button"
+                      type="button"
+                    ></button>
+                  </div>
+                  <p data-accordion="content">
+                    Грант на&nbsp;обучение&nbsp;&mdash; это финансовая
+                    поддержка, которую предоставляет организатор программы
+                    обмена студентами для оплаты учебных расходов.
+                  </p>
+                </li>
+                <li class="faq__item" data-accordion="element">
+                  <div class="faq__title-container">
+                    <h3>Как определяется стоимость программы?</h3>
+                    <button
+                      class="faq__button"
+                      title="показать больше"
+                      data-accordion="button"
+                      type="button"
+                    ></button>
+                  </div>
+                  <p data-accordion="content">
+                    Полная стоимость определяется организаторами
+                    в&nbsp;зависимости от&nbsp;направления. В&nbsp;большинстве
+                    случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную
+                    стоимость программы, и&nbsp;поэтому предусматривается
+                    определённая доля личного участия.
+                  </p>
+                </li>
+                <li class="faq__item" data-accordion="element">
+                  <div class="faq__title-container">
+                    <h3>
+                      Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для
+                      дальнейшего обучения?
+                    </h3>
+                    <button
+                      class="faq__button"
+                      title="показать больше"
+                      data-accordion="button"
+                      type="button"
+                    ></button>
+                  </div>
+                  <p data-accordion="content">
+                    Студенты, участвующие в&nbsp;проекте, могут использовать
+                    полученные знания и&nbsp;навыки в&nbsp;своей будущей
+                    профессиональной деятельности или продолжить обучение
+                    в&nbsp;высших учебных заведениях. Кроме того, многие
+                    университеты и&nbsp;колледжи предоставляют кредиты
+                    за&nbsp;участие в&nbsp;программе обмена студентами.
+                  </p>
+                </li>
+                <li class="faq__item" data-accordion="element">
+                  <div class="faq__title-container">
+                    <h3>
+                      Как выглядит полный процесс регистрации на&nbsp;программу
+                      &laquo;Маса&raquo;?
+                    </h3>
+                    <button
+                      class="faq__button"
+                      title="показать больше"
+                      data-accordion="button"
+                      type="button"
+                    ></button>
+                  </div>
+                  <p data-accordion="content">
+                    Процесс регистрации на&nbsp;программу обмена включает выбор
+                    университета-партнера и&nbsp;программы обмена, общение
+                    с&nbsp;координатором программы, заполнение заявления
+                    и&nbsp;предоставление необходимых документов, прохождение
+                    интервью, оформление визы, жилья и&nbsp;страховки, обучение
+                    по&nbsp;безопасности за&nbsp;границей и&nbsp;подписание
+                    договора об&nbsp;участии в&nbsp;программе. Подробнее можно
+                    узнать позвонив в&nbsp;центр.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="reviews">
+          <div class="reviews__container container">
+            <div class="reviews__wrapper">
+              <h2>Отзывы</h2>
+              <div class="swiper swiper-reviews">
+                <ul class="swiper-wrapper">
+                  <li class="reviews__card swiper-slide">
+                    <div class="reviews__card-title-wrapper">
+                      <div class="reviews__card-photo-wrapper">
+                        <picture class="reviews__image-container">
+                          <source
+                            type="image/webp"
+                            media="(min-width: 1200px)"
+                            srcset="
+                              img/reviews-photo.webp    1x,
+                              img/reviews-photo@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            srcset="
+                              img/reviews-photo-mob.webp    1x,
+                              img/reviews-photo-mob@2x.webp 2x
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            media="(min-width: 1200px)"
+                            srcset="
+                              img/reviews-photo.png    1x,
+                              img/reviews-photo@2x.png 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            srcset="
+                              img/reviews-photo-mob.png    1x,
+                              img/reviews-photo-mob@2x.png 2x
+                            "
+                          />
+                          <img
+                            class="reviews__image"
+                            src="img/reviews-photo.png"
+                            alt="Фотография Сара Аврахам."
+                            width="90"
+                            height="90"
+                            srcset="img/reviews-photo@2x.png 2x"
+                          />
+                        </picture>
+                        <span>Сара Аврахам</span>
+                      </div>
+                      <ul class="reviews__card-title-list">
+                        <li class="reviews__card-title-item">
+                          <h3>программа</h3>
+                          <p>Masa Art Challenge</p>
+                        </li>
+                        <li class="reviews__card-title-item">
+                          <h3>Дата</h3>
+                          <p>Осень 2022</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="reviews__card-description-container">
+                      <p>
+                        Я&nbsp;могу с&nbsp;уверенностью сказать, что это был
+                        один из&nbsp;самых незабываемых опытов в&nbsp;жизни!
+                      </p>
+                      <p>
+                        Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем
+                        израильским студентам, желающим получить незабываемые
+                        впечатления. Сочетание путешествий, общения
+                        и&nbsp;значимой работы действительно отличает
+                        её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую
+                        огромную благодарность за&nbsp;предоставленную мне
+                        возможность.
+                      </p>
+                    </div>
+                  </li>
+                  <li class="reviews__card swiper-slide">
+                    <div class="reviews__card-title-wrapper">
+                      <div class="reviews__card-photo-wrapper">
+                        <picture class="reviews__image-container">
+                          <source
+                            type="image/webp"
+                            media="(min-width: 1200px)"
+                            srcset="
+                              img/reviews-photo-david.webp    1x,
+                              img/reviews-photo-david@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            srcset="
+                              img/reviews-photo-david-mob.webp    1x,
+                              img/reviews-photo-david-mob@2x.webp 2x
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            media="(min-width: 1200px)"
+                            srcset="
+                              img/reviews-photo-david.png    1x,
+                              img/reviews-photo-david@2x.png 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            srcset="
+                              img/reviews-photo-david-mob.png    1x,
+                              img/reviews-photo-david-mob@2x.png 2x
+                            "
+                          />
+                          <img
+                            class="reviews__image"
+                            src="img/reviews-photo-david.png"
+                            alt="Фотография Давид Иммервар."
+                            width="90"
+                            height="90"
+                            srcset="img/reviews-photo-david@2x.png 2x"
+                          />
+                        </picture>
+                        <span>Давид Иммервар</span>
+                      </div>
+                      <ul class="reviews__card-title-list">
+                        <li class="reviews__card-title-item">
+                          <h3>программа</h3>
+                          <p>Volunteer Chance</p>
+                        </li>
+                        <li class="reviews__card-title-item">
+                          <h3>Дата</h3>
+                          <p>Лето 2022</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="reviews__card-description-container">
+                      <p>
+                        Благодаря опыту стажировки я&nbsp;узнал так много нового
+                        о&nbsp;себе и&nbsp;об&nbsp;окружающем мире.
+                      </p>
+                      <p>
+                        Каждый день был возможностью оказать ощутимое влияние
+                        на&nbsp;жизнь других людей. Я&nbsp;бы очень рекомендовал
+                        эту волонтерскую программу всем, кто ищет значимый
+                        и&nbsp;незабываемый опыт. Организация была
+                        на&nbsp;высшем уровне. Для меня было честью быть частью
+                        такой удивительной инициативы.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <button
+                class="swiper-button-prev swiper-button-prev-reviews swiper-button--reviews-prev swiper-button swiper-button--reviews"
+              >
+                <svg
+                  class="swiper-button__icon swiper-button__icon--prev"
+                  role="img"
+                  aria-label="arrow-back."
+                  width="16"
+                  height="32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 32"
+                >
+                  <use href="./img/sprite.svg#arrow" />
+                </svg>
+              </button>
+              <button
+                class="swiper-button-next swiper-button-next-reviews swiper-button--reviews-next swiper-button swiper-button--reviews"
+              >
+                <svg
+                  class="swiper-button__icon swiper-button__icon--next"
+                  role="img"
+                  aria-label="arrow-next."
+                  width="16"
+                  height="32"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 32"
+                >
+                  <use href="./img/sprite.svg#arrow" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts" id="contacts">
+          <div class="contacts__container container">
+            <div class="contacts__wrapper wrapper">
+              <div class="contacts__title-wrapper">
+                <h2 class="contacts__title section-title">Контакты</h2>
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <h3>центральный офис</h3>
+                    <p>
+                      г. Новосибирск, ул. Щетинкина 68,  культурный центр «Бейт
+                      Менахем»
+                    </p>
+                  </li>
+                  <li class="contacts__item">
+                    <h3>Телефон</h3>
+                    <a
+                      class="contacts__item-link contacts__item-link--tel"
+                      href="tel:+796387687676"
+                    >
+                      +7 963 876 876 76
+                    </a>
+                  </li>
+                  <li class="contacts__item">
+                    <h3>E-mail</h3>
+                    <a class="contacts__item-link" href="mailto:info@masa.ru">
+                      Info@masa.ru
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="contacts__map-wrapper" id="map"></div>
+            </div>
+          </div>
+        </section>
+
         <!-- <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
@@ -611,6 +1026,11 @@
       </div>
     </div> -->
 
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
