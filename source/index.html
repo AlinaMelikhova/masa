@@ -27,121 +27,123 @@
   <body>
     <div class="page-wrapper">
       <header class="header">
-        <div class="container">
+        <div class="header__container container">
           <div class="header__wrapper wrapper">
-            <a class="header__logo" href="#">
-              <svg
-                class="header__logo-icon"
-                role="img"
-                aria-label="logo-lifetour."
-                width="52"
-                height="52"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 52 52"
-              >
-                <use href="./img/sprite.svg#logo" />
-              </svg>
-            </a>
-            <button class="header__menu-button">
-              <span class="header__menu-button-description">меню</span>
-              <svg
-                class="header__menu-icon-burger"
-                role="img"
-                aria-label="menu."
-                width="20"
-                height="20"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <use href="./img/sprite.svg#menu" />
-              </svg>
-              <svg
-                class="header__menu-icon-cross"
-                role="img"
-                aria-label="cross."
-                width="20"
-                height="20"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <use href="./img/sprite.svg#cross" />
-              </svg>
-            </button>
-            <nav class="header__nav">
-              <ul class="header__menu-list">
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#about">О проекте</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#programs">Программы</a>
-                  <ul
-                    class="header__menu-inner-list header__menu-inner-list--programs"
-                  >
-                    <li class="header__menu-inner-item">
-                      <a class="header__menu-inner-link" href="#programs">
-                        Стажировки
-                      </a>
-                    </li>
-                    <li class="header__menu-inner-item">
-                      <a class="header__menu-inner-link" href="#programs">
-                        Волонтёрство
-                      </a>
-                    </li>
-                    <li class="header__menu-inner-item">
-                      <a class="header__menu-inner-link" href="#programs">
-                        Учёба
-                      </a>
-                    </li>
-                    <li class="header__menu-inner-item">
-                      <a class="header__menu-inner-link" href="#programs">
-                        Религия
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#path">как поехать</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#reviews">отзывы</a>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#programs">новости</a>
-                  <ul
-                    class="header__menu-inner-list header__menu-inner-list--programs"
-                  >
-                    <li class="header__menu-inner-item">
-                      <a class="header__menu-inner-link" href="#programs">
-                        общее
-                      </a>
-                    </li>
-                    <li class="header__menu-inner-item">
-                      <a class="header__menu-inner-link" href="#programs">
-                        Волонтёрство
-                      </a>
-                    </li>
-                    <li class="header__menu-inner-item">
-                      <a class="header__menu-inner-link" href="#programs">
-                        Стажировки
-                      </a>
-                    </li>
-                    <li class="header__menu-inner-item">
-                      <a class="header__menu-inner-link" href="#programs">
-                        Карьера
-                      </a>
-                    </li>
-                    <li class="header__menu-inner-item">
-                      <a class="header__menu-inner-link" href="#programs">
-                        путешествия
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#contacts">контакты</a>
-                </li>
-              </ul>
-            </nav>
+            <div class="header__positioning-wrapper">
+              <a class="header__logo" href="#">
+                <svg
+                  class="header__logo-icon"
+                  role="img"
+                  aria-label="logo-lifetour."
+                  width="52"
+                  height="52"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <use href="./img/sprite.svg#logo" />
+                </svg>
+              </a>
+              <button class="header__menu-button">
+                <span>меню</span>
+                <svg
+                  class="header__menu-icon-burger"
+                  role="img"
+                  aria-label="menu."
+                  width="46"
+                  height="46"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 46 46"
+                >
+                  <use href="./img/sprite.svg#menu" />
+                </svg>
+                <svg
+                  class="header__menu-icon-cross"
+                  role="img"
+                  aria-label="cross."
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <use href="./img/sprite.svg#cross" />
+                </svg>
+              </button>
+              <nav class="header__nav">
+                <ul class="header__menu-list">
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="#about">О проекте</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="#programs">Программы</a>
+                    <ul
+                      class="header__menu-inner-list header__menu-inner-list--programs"
+                    >
+                      <li class="header__menu-inner-item">
+                        <a class="header__menu-inner-link" href="#programs">
+                          Стажировки
+                        </a>
+                      </li>
+                      <li class="header__menu-inner-item">
+                        <a class="header__menu-inner-link" href="#programs">
+                          Волонтёрство
+                        </a>
+                      </li>
+                      <li class="header__menu-inner-item">
+                        <a class="header__menu-inner-link" href="#programs">
+                          Учёба
+                        </a>
+                      </li>
+                      <li class="header__menu-inner-item">
+                        <a class="header__menu-inner-link" href="#programs">
+                          Религия
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="#path">как поехать</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="#reviews">отзывы</a>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="#programs">новости</a>
+                    <ul
+                      class="header__menu-inner-list header__menu-inner-list--programs"
+                    >
+                      <li class="header__menu-inner-item">
+                        <a class="header__menu-inner-link" href="#programs">
+                          общее
+                        </a>
+                      </li>
+                      <li class="header__menu-inner-item">
+                        <a class="header__menu-inner-link" href="#programs">
+                          Волонтёрство
+                        </a>
+                      </li>
+                      <li class="header__menu-inner-item">
+                        <a class="header__menu-inner-link" href="#programs">
+                          Стажировки
+                        </a>
+                      </li>
+                      <li class="header__menu-inner-item">
+                        <a class="header__menu-inner-link" href="#programs">
+                          Карьера
+                        </a>
+                      </li>
+                      <li class="header__menu-inner-item">
+                        <a class="header__menu-inner-link" href="#programs">
+                          путешествия
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__menu-item">
+                    <a class="header__menu-link" href="#contacts">контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </header>
@@ -157,6 +159,9 @@
                 <div class="hero__container hero__container--trainee container">
                   <div class="hero__wrapper wrapper">
                     <div class="hero__block-wrapper">
+                      <div
+                        class="swiper-pagination hero__swiper-pagination"
+                      ></div>
                       <h2>
                         Программы стажировок в&nbsp;крупнейших компаниях Израиля
                       </h2>
@@ -166,10 +171,12 @@
                           израильских компаниях и&nbsp;государственных
                           организациях.
                         </p>
-                        <a class="primary-button" href="#">
-                          <span>подробнее</span>
-                          <span class="hero__link-icon arrow-button"></span>
-                        </a>
+                        <div class="hero__button-wrapper">
+                          <a class="primary-button" href="#">
+                            <span>подробнее</span>
+                            <span class="hero__link-icon arrow-button"></span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -181,6 +188,9 @@
                 >
                   <div class="hero__wrapper wrapper">
                     <div class="hero__block-wrapper">
+                      <div
+                        class="swiper-pagination hero__swiper-pagination"
+                      ></div>
                       <h2>
                         Волонтёрские программы&nbsp;&mdash; внесите свой вклад
                         в&nbsp;общество
@@ -190,10 +200,12 @@
                           Возможности для преподавания, органического сельского
                           хозяйства, устойчивого образа жизни и&nbsp;другое.
                         </p>
-                        <a class="primary-button" href="#">
-                          <span>подробнее</span>
-                          <span class="hero__link-icon arrow-button"></span>
-                        </a>
+                        <div class="hero__button-wrapper">
+                          <a class="primary-button" href="#">
+                            <span>подробнее</span>
+                            <span class="hero__link-icon arrow-button"></span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -205,6 +217,9 @@
                 >
                   <div class="hero__wrapper wrapper">
                     <div class="hero__block-wrapper">
+                      <div
+                        class="swiper-pagination hero__swiper-pagination"
+                      ></div>
                       <h2>
                         Глобальный профессиональный опыт обучения
                         за&nbsp;рубежом
@@ -215,10 +230,12 @@
                           практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий
                           израильский стиль жизни!
                         </p>
-                        <a class="primary-button" href="#">
-                          <span>подробнее</span>
-                          <span class="hero__link-icon arrow-button"></span>
-                        </a>
+                        <div class="hero__button-wrapper">
+                          <a class="primary-button" href="#">
+                            <span>подробнее</span>
+                            <span class="hero__link-icon arrow-button"></span>
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -294,7 +311,7 @@
               <div class="swiper swiper-programs">
                 <div class="programs__title-wrapper">
                   <h2 class="programs__title section-title">Программы</h2>
-                  <a class="about__button primary-button" href="#">
+                  <a class="programs__button primary-button" href="#">
                     <span>все программы</span>
                     <span class="hero__link-icon arrow-button"></span>
                   </a>
@@ -966,6 +983,139 @@
           </div>
         </section>
 
+        <section class="form" id="form">
+          <div class="form__container container">
+            <div class="form__wrapper wrapper">
+              <div class="form__content-wrapper">
+                <div class="form__description-wrapper">
+                  <h2>Напишите нам</h2>
+                  <p>
+                    Оставьте ваши контакты, если у&nbsp;вас остались
+                    вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!
+                  </p>
+                  <div
+                    class="form__input-wrapper"
+                    data-callback="base"
+                    data-form-validate
+                  >
+                    <form
+                      class="form__form"
+                      action="https://echo.htmlacademy.ru/"
+                      method="post"
+                    >
+                      <div class="form__form-input-container">
+                        <label
+                          for="name"
+                          data-validate-type="text"
+                          data-limitation="letters"
+                          data-message-base="Пустое поле"
+                          data-message-extra="Ошибка"
+                          data-required
+                        >
+                          <span>Имя</span>
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder=""
+                            required
+                          />
+                          <span></span>
+                        </label>
+                        <label
+                          for="user-tel-number"
+                          data-matrix-limitation="digit"
+                          data-message-base="Пустое поле"
+                          data-message-extra="Ошибка"
+                          data-validate-type="phone"
+                          data-required
+                        >
+                          <span>Телефон</span>
+                          <input
+                            type="tel"
+                            name="user-tel-number"
+                            id="user-tel-number"
+                            placeholder=""
+                            required
+                          />
+                          <span></span>
+                        </label>
+                        <label
+                          for="user-message"
+                          data-matrix-limitation="letters-and-digit"
+                          data-message-base="Пустое поле"
+                          data-message-extra="Ошибка"
+                          data-validate-type="message"
+                          data-required
+                        >
+                          <span>Ваше сообщение</span>
+                          <input
+                            type="text"
+                            name="user-message"
+                            id="user-message"
+                            placeholder=""
+                            required
+                          />
+                          <span></span>
+                        </label>
+                        <label for="user-city">
+                          <span>Выберите город</span>
+                          <select
+                            name="user-city"
+                            id="user-city"
+                            placeholder=""
+                            required
+                          >
+                            <option value="spb">Санкт-Петербург</option>
+                            <option value="spb">Санкт-Петербург</option>
+                            <option value="spb">Санкт-Петербург</option>
+                            <option value="spb">Санкт-Петербург</option>
+                          </select>
+                        </label>
+                        <button
+                          class="form__button primary-button"
+                          type="submit"
+                        >
+                          <span>отправить</span>
+                          <span class="hero__link-icon arrow-button"></span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                    srcset="img/form.webp 1x, img/form@2x.webp 2x"
+                  />
+                  <source
+                    media="(max-width: 1199px)"
+                    srcset="img/form-tab.webp 1x, img/form-tab@2x.webp 2x"
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                    srcset="img/form.jpg 1x, img/formo@2x.jpg 2x"
+                  />
+                  <source
+                    media="(max-width: 1199px)"
+                    srcset="img/form-tab.jpg 1x, img/form-tab@2x.jpg 2x"
+                  />
+                  <img
+                    class="form__image"
+                    src="img/form.jpg"
+                    alt="фото пляжа."
+                    width="1240"
+                    height="803"
+                    srcset="img/form@2x.jpg 2x"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
@@ -976,8 +1126,101 @@
           </div>
         </section> -->
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__wrapper wrapper">
+            <div class="footer__top-wrapper">
+              <a class="footer__logo" href="#">
+                <svg
+                  class="footer__logo-icon"
+                  role="img"
+                  aria-label="logo-masa."
+                  width="52"
+                  height="52"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 52 52"
+                >
+                  <use href="./img/sprite.svg#logo"></use>
+                </svg>
+              </a>
+              <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#about">О проекте</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#programs">Программы</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#path">Как поехать</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#reviews">Отзывы</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#news">Новости</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a class="footer__menu-link" href="#contacts">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <div class="footer__social-item-wrapper">
+                    <svg
+                      class="footer__item-icon"
+                      role="img"
+                      aria-label="vk."
+                      width="16"
+                      height="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                    >
+                      <use href="./img/sprite.svg#vk" />
+                    </svg>
+                  </div>
+                </li>
+                <li class="footer__social-item">
+                  <div class="footer__social-item-wrapper">
+                    <svg
+                      class="footer__item-icon"
+                      role="img"
+                      aria-label="ok."
+                      width="16"
+                      height="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                    >
+                      <use href="./img/sprite.svg#ok" />
+                    </svg>
+                  </div>
+                </li>
+                <li class="footer__social-item">
+                  <div class="footer__social-item-wrapper">
+                    <svg
+                      class="footer__item-icon"
+                      role="img"
+                      aria-label="reddit."
+                      width="16"
+                      height="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                    >
+                      <use href="./img/sprite.svg#reddit" />
+                    </svg>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__bottom-wrapper">
+              <span class="footer__copyright"
+                >Masa © 2023 Все права защищены</span
+              >
+              <a class="footer__policy" href="#">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 

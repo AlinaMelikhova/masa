@@ -1,3 +1,21 @@
+@mixin angle {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: $color-transparent;
+  background-repeat: no-repeat;
+  background-image: url("../img/svg/angle.svg");
+  background-position: 0 0;
+  left: 100%;
+
+  @include vp-767 {
+    width: 10px;
+    height: 10px;
+    background-size: 10px 10px;
+  }
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;

@@ -1,26 +1,99 @@
-.btn {
-  display: inline-flex;
-  padding: 10px 20px;
+.primary-button {
+  display: flex;
+  padding: 4px 4px 4px 30px;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid $color-bright;
+  background-color: $color-transparent;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
-  cursor: pointer;
-
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
+  @include vp-767 {
+    padding: 4px 4px 4px 20px;
   }
 
-  &:disabled {
-    opacity: 0.5;
+  span {
+    color: $color-bright;
+    text-align: center;
+    font-family: $font-regular;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
 
-    pointer-events: none;
+    @include vp-767 {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.24px;
+    }
+  }
+}
+
+.arrow-button {
+  margin-left: 30px;
+  display: flex;
+  width: 46px;
+  height: 46px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 44px;
+  background-color: $color-bright;
+  background-repeat: no-repeat;
+  background-image: url("../img/svg/arrow-up.svg");
+  background-size: 10px 10px;
+  background-position: center;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.primary-button:not(.primary-button--disabled):hover,
+.primary-button:not(.primary-button--disabled):focus-visible {
+  background-color: $color-bright;
+  outline: none;
+
+  span {
+    color: $color-default-white;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  & .arrow-button {
+    background-color: $color-default-white;
+    background-image: url("../img/svg/arrow-right.svg");
+    background-size: 12px 12px;
+  }
+}
+
+.primary-button:not(.primary-button--disabled):active {
+  background-color: $color-bright;
+
+  span {
+    color: $color-default-white;
+    opacity: 0.7;
+  }
+
+  & .arrow-button {
+    opacity: 1;
+    background-color: $color-default-white;
+    background-image: url("../img/svg/arrow-right-active.svg");
+  }
+}
+
+.primary-button--disabled {
+  background-color: $color-transparent;
+  border: 1px solid $color-disabled;
+  cursor: auto;
+
+  span {
+    color: $color-disabled;
+    opacity: 1;
+  }
+
+  & .arrow-button {
+    opacity: 1;
+    background-color: $color-disabled;
+    background-image: url("../img/svg/arrow-up-disabled.svg");
   }
 }
