@@ -15,6 +15,12 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="css/style.min.css" />
     <link
       rel="preload"
@@ -436,7 +442,7 @@
                 <p>
                   Свяжитесь с&nbsp;координатором, чтобы узнать полную
                   информацию. Вы&nbsp;получите актуальные сведения
-                  о&nbsp;доступных программах  и&nbsp;городах, в&nbsp;которых
+                  о&nbsp;доступных программах и&nbsp;городах, в&nbsp;которых
                   можете пройти программу.
                 </p>
                 <picture>
@@ -480,24 +486,32 @@
                 <h3>Чтобы получить грант на&nbsp;обучение, вам нужно:</h3>
                 <ul class="path__list">
                   <li class="path__item">
-                    <p>
-                      Быть в&nbsp;возрасте от&nbsp;16&nbsp;до&nbsp;30&nbsp;лет
-                    </p>
+                    <div class="path__item-wrapper">
+                      <p>
+                        Быть в&nbsp;возрасте от&nbsp;16&nbsp;до&nbsp;30&nbsp;лет
+                      </p>
+                    </div>
                   </li>
                   <li class="path__item">
-                    <p>Иметь оконченное среднее образование</p>
+                    <div class="path__item-wrapper">
+                      <p>Иметь оконченное среднее образование</p>
+                    </div>
                   </li>
                   <li class="path__item">
-                    <p>
-                      Иметь документально подтверждённые  еврейские корни
-                      и&nbsp;пройти консульскую проверку
-                    </p>
+                    <div class="path__item-wrapper">
+                      <p>
+                        Иметь документально подтверждённые  еврейские корни
+                        и&nbsp;пройти консульскую проверку
+                      </p>
+                    </div>
                   </li>
                   <li class="path__item">
-                    <p>
-                      За&nbsp;последние 2&nbsp;года быть не&nbsp;больше
-                      3х&nbsp;месяцев подряд непрерывно в&nbsp;Израиле
-                    </p>
+                    <div class="path__item-wrapper">
+                      <p>
+                        За&nbsp;последние 2&nbsp;года быть не&nbsp;больше
+                        3х&nbsp;месяцев подряд непрерывно в&nbsp;Израиле
+                      </p>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -991,13 +1005,13 @@
           <div class="contacts__container container">
             <div class="contacts__wrapper wrapper">
               <div class="contacts__title-wrapper">
-                <h2 class="contacts__title section-title">Контакты</h2>
+                <h2 class="section-title">Контакты</h2>
                 <ul class="contacts__list">
                   <li class="contacts__item">
                     <h3>центральный офис</h3>
                     <p>
-                      г. Новосибирск, ул. Щетинкина 68,  культурный центр «Бейт
-                      Менахем»
+                      г. Новосибирск, ул. Щетинкина 68,<br />культурный центр
+                      «Бейт Менахем»
                     </p>
                   </li>
                   <li class="contacts__item">

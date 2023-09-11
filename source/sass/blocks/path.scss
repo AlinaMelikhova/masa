@@ -1,0 +1,203 @@
+.path__container {
+  background-color: $color-bright;
+  padding: 120px 0;
+
+  @include vp-1200 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 67px 0;
+  }
+}
+
+.path__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 206px;
+
+  @include vp-1200 {
+    padding-right: 45px;
+    display: block;
+  }
+
+  @include vp-767 {
+    padding-right: 15px;
+  }
+}
+
+.path__description-wrapper {
+  box-sizing: border-box;
+  width: 500px;
+
+  &:last-child {
+    width: 480px;
+  }
+
+  @include vp-1200 {
+    width: 100%;
+
+    &:last-child {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    color: $color-default-white;
+    margin-bottom: 42px;
+
+    @include vp-1200 {
+      margin-bottom: 44px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 21px;
+    }
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    color: $color-light;
+    font-family: $font-regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 40px;
+
+    @include vp-1200 {
+      max-width: 500px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  h3 {
+    color: $color-light;
+    font-family: $font-regular;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 46px;
+
+    @include vp-1200 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.path__image {
+  @include vp-1200 {
+    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+}
+
+.path__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @include vp-1200 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 27px 10px;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.path__item {
+  padding: 15px 0 0 20px;
+  position: relative;
+  margin-bottom: 8px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include vp-1200 {
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
+}
+
+.path__item-wrapper {
+  padding: 30px 25px;
+  border-radius: 16px;
+  border: 1px solid $color-light;
+  height: 100%;
+
+  @include vp-767 {
+    padding: 24px 25px;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    color: $color-light;
+    font-family: $font-regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+
+    @include vp-1200 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+    }
+  }
+
+  &::before {
+    box-sizing: border-box;
+    content: counter(section);
+    counter-increment: section;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 42px;
+    height: 42px;
+    padding: 10px;
+    background-color: $color-bright;
+    z-index: 10;
+    color: $color-default-white;
+    text-align: center;
+    font-family: $font-regular;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.22px;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 18px;
+    }
+  }
+}

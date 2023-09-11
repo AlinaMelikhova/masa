@@ -28,6 +28,12 @@
 }
 
 .header__logo {
+  &--opened {
+    @include vp-1200 {
+      display: none;
+    }
+  }
+
   &:hover,
   &:focus-visible,
   &:active {
@@ -83,12 +89,26 @@
     .header__menu-icon-cross {
       display: block;
       margin-left: 172px;
+
+      @include vp-1200 {
+        margin-left: auto;
+      }
+    }
+
+    @include vp-1200 {
+      width: 100%;
     }
   }
 }
 
 .header__menu-wraper {
   position: relative;
+
+  &--opened {
+    @include vp-1200 {
+      width: 100%;
+    }
+  }
 }
 
 .header__nav {
