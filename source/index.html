@@ -43,106 +43,137 @@
                   <use href="./img/sprite.svg#logo" />
                 </svg>
               </a>
-              <button class="header__menu-button">
-                <span>меню</span>
-                <svg
-                  class="header__menu-icon-burger"
-                  role="img"
-                  aria-label="menu."
-                  width="46"
-                  height="46"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 46 46"
-                >
-                  <use href="./img/sprite.svg#menu" />
-                </svg>
-                <svg
-                  class="header__menu-icon-cross"
-                  role="img"
-                  aria-label="cross."
-                  width="20"
-                  height="20"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <use href="./img/sprite.svg#cross" />
-                </svg>
-              </button>
-              <nav class="header__nav">
-                <ul class="header__menu-list">
-                  <li class="header__menu-item">
-                    <a class="header__menu-link" href="#about">О проекте</a>
-                  </li>
-                  <li class="header__menu-item">
-                    <a class="header__menu-link" href="#programs">Программы</a>
-                    <ul
-                      class="header__menu-inner-list header__menu-inner-list--programs"
-                    >
-                      <li class="header__menu-inner-item">
-                        <a class="header__menu-inner-link" href="#programs">
-                          Стажировки
-                        </a>
-                      </li>
-                      <li class="header__menu-inner-item">
-                        <a class="header__menu-inner-link" href="#programs">
-                          Волонтёрство
-                        </a>
-                      </li>
-                      <li class="header__menu-inner-item">
-                        <a class="header__menu-inner-link" href="#programs">
-                          Учёба
-                        </a>
-                      </li>
-                      <li class="header__menu-inner-item">
-                        <a class="header__menu-inner-link" href="#programs">
-                          Религия
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="header__menu-item">
-                    <a class="header__menu-link" href="#path">как поехать</a>
-                  </li>
-                  <li class="header__menu-item">
-                    <a class="header__menu-link" href="#reviews">отзывы</a>
-                  </li>
-                  <li class="header__menu-item">
-                    <a class="header__menu-link" href="#programs">новости</a>
-                    <ul
-                      class="header__menu-inner-list header__menu-inner-list--programs"
-                    >
-                      <li class="header__menu-inner-item">
-                        <a class="header__menu-inner-link" href="#programs">
-                          общее
-                        </a>
-                      </li>
-                      <li class="header__menu-inner-item">
-                        <a class="header__menu-inner-link" href="#programs">
-                          Волонтёрство
-                        </a>
-                      </li>
-                      <li class="header__menu-inner-item">
-                        <a class="header__menu-inner-link" href="#programs">
-                          Стажировки
-                        </a>
-                      </li>
-                      <li class="header__menu-inner-item">
-                        <a class="header__menu-inner-link" href="#programs">
-                          Карьера
-                        </a>
-                      </li>
-                      <li class="header__menu-inner-item">
-                        <a class="header__menu-inner-link" href="#programs">
-                          путешествия
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="header__menu-item">
-                    <a class="header__menu-link" href="#contacts">контакты</a>
-                  </li>
-                </ul>
-              </nav>
+              <div class="header__menu-wraper">
+                <button class="header__menu-button">
+                  <span>меню</span>
+                  <svg
+                    class="header__menu-icon-burger"
+                    role="img"
+                    aria-label="menu."
+                    width="46"
+                    height="46"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 46 46"
+                  >
+                    <use href="./img/sprite.svg#menu" />
+                  </svg>
+                  <svg
+                    class="header__menu-icon-cross"
+                    role="img"
+                    aria-label="cross."
+                    width="46"
+                    height="46"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 46 46"
+                  >
+                    <use href="./img/sprite.svg#cross" />
+                  </svg>
+                </button>
+                <nav class="header__nav">
+                  <ul class="header__menu-list">
+                    <li class="header__menu-item">
+                      <a class="header__menu-link" href="#about">О проекте</a>
+                    </li>
+                    <li class="header__menu-item header__menu-item--programs">
+                      <a class="header__menu-expanded-link" href="#"
+                        >Программы</a
+                      >
+                      <ul
+                        class="header__menu-list header__menu-list--inner header__menu-list--inner-programs"
+                      >
+                        <li class="header__menu-item header__menu-item--inner">
+                          <a
+                            class="header__menu-link header__menu-link--inner"
+                            href="#programs"
+                          >
+                            Стажировки
+                          </a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--inner">
+                          <a
+                            class="header__menu-link header__menu-link--inner"
+                            href="#programs"
+                          >
+                            Волонтёрство
+                          </a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--inner">
+                          <a
+                            class="header__menu-link header__menu-link--inner"
+                            href="#programs"
+                          >
+                            Учёба
+                          </a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--inner">
+                          <a
+                            class="header__menu-link header__menu-link--inner"
+                            href="#programs"
+                          >
+                            Религия
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="header__menu-item">
+                      <a class="header__menu-link" href="#path">как поехать</a>
+                    </li>
+                    <li class="header__menu-item">
+                      <a class="header__menu-link" href="#reviews">отзывы</a>
+                    </li>
+                    <li class="header__menu-item">
+                      <a class="header__menu-expanded-link" href="#">новости</a>
+                      <ul
+                        class="header__menu-list header__menu-list--inner header__menu-list--inner-news"
+                      >
+                        <li class="header__menu-item header__menu-item--inner">
+                          <a
+                            class="header__menu-link header__menu-link--inner"
+                            href="#news"
+                          >
+                            общее
+                          </a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--inner">
+                          <a
+                            class="header__menu-link header__menu-link--inner"
+                            href="#news"
+                          >
+                            Волонтёрство
+                          </a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--inner">
+                          <a
+                            class="header__menu-link header__menu-link--inner"
+                            href="#news"
+                          >
+                            Стажировки
+                          </a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--inner">
+                          <a
+                            class="header__menu-link header__menu-link--inner"
+                            href="#news"
+                          >
+                            Карьера
+                          </a>
+                        </li>
+                        <li class="header__menu-item header__menu-item--inner">
+                          <a
+                            class="header__menu-link header__menu-link--inner"
+                            href="#news"
+                          >
+                            путешествия
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="header__menu-item">
+                      <a class="header__menu-link" href="#contacts">контакты</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </div>

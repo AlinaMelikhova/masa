@@ -1,6 +1,7 @@
 import { iosVhFix } from "./utils/ios-vh-fix";
 import { initModals } from "./modules/modals/init-modals";
 import { Form } from "./modules/form-validate/form";
+import { handleMobileMenu } from "./modules/mobile-menu";
 import { initSwipers } from "./modules/my-swipers";
 
 // ---------------------------------
@@ -12,6 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
   iosVhFix();
 
   // Modules
+  handleMobileMenu();
   initSwipers();
   // ---------------------------------
 
