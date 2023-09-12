@@ -818,10 +818,10 @@
         </section>
         <section class="reviews">
           <div class="reviews__container container">
-            <div class="reviews__wrapper">
-              <h2>Отзывы</h2>
+            <div class="reviews__wrapper wrapper">
+              <h2 class="section-title">Отзывы</h2>
               <div class="swiper swiper-reviews">
-                <ul class="swiper-wrapper">
+                <ul class="reviews__list swiper-wrapper">
                   <li class="reviews__card swiper-slide">
                     <div class="reviews__card-title-wrapper">
                       <div class="reviews__card-photo-wrapper">
@@ -857,7 +857,6 @@
                             "
                           />
                           <img
-                            class="reviews__image"
                             src="img/reviews-photo.png"
                             alt="Фотография Сара Аврахам."
                             width="90"
@@ -865,7 +864,7 @@
                             srcset="img/reviews-photo@2x.png 2x"
                           />
                         </picture>
-                        <span>Сара Аврахам</span>
+                        <span>Сара<br />Аврахам</span>
                       </div>
                       <ul class="reviews__card-title-list">
                         <li class="reviews__card-title-item">
@@ -929,7 +928,6 @@
                             "
                           />
                           <img
-                            class="reviews__image"
                             src="img/reviews-photo-david.png"
                             alt="Фотография Давид Иммервар."
                             width="90"
@@ -937,7 +935,7 @@
                             srcset="img/reviews-photo-david@2x.png 2x"
                           />
                         </picture>
-                        <span>Давид Иммервар</span>
+                        <span>Давид<br />Иммервар</span>
                       </div>
                       <ul class="reviews__card-title-list">
                         <li class="reviews__card-title-item">
@@ -965,36 +963,104 @@
                       </p>
                     </div>
                   </li>
+                  <li class="reviews__card swiper-slide">
+                    <div class="reviews__card-title-wrapper">
+                      <div class="reviews__card-photo-wrapper">
+                        <picture class="reviews__image-container">
+                          <source
+                            type="image/webp"
+                            media="(min-width: 1200px)"
+                            srcset="
+                              img/reviews-photo.webp    1x,
+                              img/reviews-photo@2x.webp 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            srcset="
+                              img/reviews-photo-mob.webp    1x,
+                              img/reviews-photo-mob@2x.webp 2x
+                            "
+                          />
+                          <source
+                            type="image/webp"
+                            media="(min-width: 1200px)"
+                            srcset="
+                              img/reviews-photo.png    1x,
+                              img/reviews-photo@2x.png 2x
+                            "
+                          />
+                          <source
+                            media="(max-width: 767px)"
+                            srcset="
+                              img/reviews-photo-mob.png    1x,
+                              img/reviews-photo-mob@2x.png 2x
+                            "
+                          />
+                          <img
+                            src="img/reviews-photo.png"
+                            alt="Фотография Сара Аврахам."
+                            width="90"
+                            height="90"
+                            srcset="img/reviews-photo@2x.png 2x"
+                          />
+                        </picture>
+                        <span>Сара<br />Аврахам</span>
+                      </div>
+                      <ul class="reviews__card-title-list">
+                        <li class="reviews__card-title-item">
+                          <h3>программа</h3>
+                          <p>Masa Art Challenge</p>
+                        </li>
+                        <li class="reviews__card-title-item">
+                          <h3>Дата</h3>
+                          <p>Осень 2022</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="reviews__card-description-container">
+                      <p>
+                        Я&nbsp;могу с&nbsp;уверенностью сказать, что это был
+                        один из&nbsp;самых незабываемых опытов в&nbsp;жизни!
+                      </p>
+                      <p>
+                        Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем
+                        израильским студентам, желающим получить незабываемые
+                        впечатления. Сочетание путешествий, общения
+                        и&nbsp;значимой работы действительно отличает
+                        её&nbsp;от&nbsp;других программ, и&nbsp;я&nbsp;чувствую
+                        огромную благодарность за&nbsp;предоставленную мне
+                        возможность.
+                      </p>
+                    </div>
+                  </li>
                 </ul>
+                <div class="swiper-pagination--reviews"></div>
               </div>
-              <button
-                class="swiper-button-prev swiper-button-prev-reviews swiper-button--reviews-prev swiper-button swiper-button--reviews"
-              >
+              <button class="swiper-button-prev swiper-button-prev--reviews">
                 <svg
-                  class="swiper-button__icon swiper-button__icon--prev"
+                  class="swiper-button__icon"
                   role="img"
                   aria-label="arrow-back."
-                  width="16"
-                  height="32"
+                  width="10"
+                  height="10"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 32"
+                  viewBox="0 0 10 10"
                 >
-                  <use href="./img/sprite.svg#arrow" />
+                  <use href="./img/sprite.svg#arrow-swiper" />
                 </svg>
               </button>
-              <button
-                class="swiper-button-next swiper-button-next-reviews swiper-button--reviews-next swiper-button swiper-button--reviews"
-              >
+              <button class="swiper-button-next swiper-button-next--reviews">
                 <svg
-                  class="swiper-button__icon swiper-button__icon--next"
+                  class="swiper-button__icon"
                   role="img"
                   aria-label="arrow-next."
-                  width="16"
-                  height="32"
+                  width="10"
+                  height="10"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 32"
+                  viewBox="0 0 10 10"
                 >
-                  <use href="./img/sprite.svg#arrow" />
+                  <use href="./img/sprite.svg#arrow-swiper" />
                 </svg>
               </button>
             </div>

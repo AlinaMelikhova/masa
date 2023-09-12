@@ -25,11 +25,44 @@ const initHeroSwiper = () => {
   });
 };
 
+const initReviewSwiper = () => {
+  // eslint-disable-next-line no-new
+  new Swiper(".swiper-reviews", {
+    direction: "horizontal",
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 15,
+    speed: 300,
+
+    pagination: {
+      el: ".swiper-pagination--reviews",
+      type: "progressbar",
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next--reviews",
+      prevEl: ".swiper-button-prev--reviews",
+    },
+
+    breakpoints: {
+      1200: {
+        allowTouchMove: false,
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      768: {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+      },
+    },
+  });
+};
+
 export const initSwipers = () => {
   initHeroSwiper();
   //   initToursSwiper();
   //   initEducationSwiper();
-  //   initReviewSwiper();
+  initReviewSwiper();
   //   initGalleruSwiper();
 
   //   if (window.matchMedia('(min-width:1200px)').matches) {
