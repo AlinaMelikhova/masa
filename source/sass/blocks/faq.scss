@@ -1,0 +1,227 @@
+.faq__container {
+  padding: 131px 0 120px;
+
+  @include vp-1200 {
+    padding: 113px 0 100px;
+  }
+
+  @include vp-767 {
+    padding: 72px 0;
+  }
+}
+
+.faq__wrapper {
+  padding: 0 206px;
+
+  @include vp-1200 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 73px;
+    text-align: center;
+
+    @include vp-1200 {
+      margin-bottom: 53px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+.faq__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.faq__item {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid $color-bright;
+  transition: background-color 0.3s;
+
+  @include vp-1200 {
+    padding: 30px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &.is-active {
+    background-color: $color-bright;
+  }
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    max-width: 70%;
+    color: $color-bright;
+    font-family: $font-regular;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    transition: color 0.6s;
+    transition: margin-bottom 0.6s;
+
+    @include vp-1200 {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &.is-active h3 {
+    color: $color-default-white;
+    margin-bottom: 20px;
+  }
+
+  &.is-active button {
+    background-color: $color-default-white;
+
+    &::after {
+      width: 0;
+      height: 0;
+    }
+
+    &::before {
+      background-color: $color-bright;
+    }
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus-visible {
+      outline: none;
+      background-color: $color-transparent;
+      box-shadow: inset 0 0 0 1px $color-default-white;
+
+      &::before,
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+
+    &:not(:disabled):active {
+      background-color: $color-default-white;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        background-color: $color-dark-bright;
+      }
+    }
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    max-width: 650px;
+    color: $color-light;
+    font-family: $font-regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    overflow: hidden;
+    transition: max-height 0.6s;
+
+    @include vp-1200 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      max-width: 100%;
+    }
+  }
+}
+
+.faq__title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.faq__button {
+  position: relative;
+  background: $color-bright;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $color-default-white;
+    width: 1px;
+    height: 20px;
+    top: calc(50% - 10px);
+    left: calc(50% - 0.5px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $color-default-white;
+    height: 1px;
+    width: 20px;
+    left: calc(50% - 10px);
+    top: calc(50% - 0.5px);
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus-visible {
+    outline: none;
+    background-color: $color-transparent;
+    box-shadow: inset 0 0 0 1px $color-bright;
+
+    &::before,
+    &::after {
+      background-color: $color-bright;
+    }
+  }
+
+  &:not(:disabled):active {
+    background-color: $color-dark-bright;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+    box-shadow: none;
+    cursor: auto;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
+      opacity: 0.6;
+    }
+  }
+}

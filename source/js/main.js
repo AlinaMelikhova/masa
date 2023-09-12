@@ -3,15 +3,15 @@ import { initModals } from "./modules/modals/init-modals";
 import { Form } from "./modules/form-validate/form";
 import { handleMobileMenu } from "./modules/mobile-menu";
 import { initSwipers } from "./modules/my-swipers";
+import { initAccordions } from "./vendor/init-accordion";
 import "./modules/leaflet";
 
 // ---------------------------------
 
 window.addEventListener("DOMContentLoaded", () => {
   // Utils
-  // ---------------------------------
-
   iosVhFix();
+  initAccordions();
 
   // Modules
   handleMobileMenu();
