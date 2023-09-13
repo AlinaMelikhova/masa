@@ -435,14 +435,14 @@ button.swiper-pagination-bullet {
   -ms-touch-action: none;
   background: rgba(0, 0, 0, 0.1);
 }
-.swiper-horizontal > .swiper-scrollbar {
-  position: absolute;
-  left: 1%;
-  bottom: 3px;
-  z-index: 50;
-  height: 5px;
-  width: 98%;
-}
+// .swiper-horizontal > .swiper-scrollbar {
+//   position: absolute;
+//   left: 1%;
+//   bottom: 3px;
+//   z-index: 50;
+//   height: 5px;
+//   width: 98%;
+// }
 .swiper-vertical > .swiper-scrollbar {
   position: absolute;
   right: 3px;
@@ -455,7 +455,7 @@ button.swiper-pagination-bullet {
   height: 100%;
   width: 100%;
   position: relative;
-  background: rgba(0, 0, 0, 0.5);
+  background: #316dc2;
   border-radius: 10px;
   left: 0;
   top: 0;

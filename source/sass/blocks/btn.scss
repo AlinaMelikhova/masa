@@ -1,4 +1,5 @@
 .primary-button {
+  box-sizing: border-box;
   display: flex;
   padding: 4px 4px 4px 30px;
   align-items: center;
@@ -28,13 +29,21 @@
       letter-spacing: 0.24px;
     }
   }
+
+  .arrow-button {
+    width: 46px;
+    height: 46px;
+
+    @include vp-767 {
+      width: 34px;
+      height: 34px;
+    }
+  }
 }
 
 .arrow-button {
   margin-left: 30px;
   display: flex;
-  width: 46px;
-  height: 46px;
   justify-content: center;
   align-items: center;
   border-radius: 44px;
@@ -43,11 +52,6 @@
   background-image: url("../img/svg/arrow-up.svg");
   background-size: 10px 10px;
   background-position: center;
-
-  @include vp-767 {
-    width: 34px;
-    height: 34px;
-  }
 }
 
 .primary-button:not(.primary-button--disabled):hover,

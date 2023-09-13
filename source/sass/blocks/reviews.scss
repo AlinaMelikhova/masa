@@ -12,6 +12,7 @@
 
 .reviews__wrapper {
   position: relative;
+
   @include vp-1200 {
     padding: 0;
   }

@@ -25,6 +25,38 @@ const initHeroSwiper = () => {
   });
 };
 
+const initProgramsSwiper = () => {
+  // eslint-disable-next-line no-new
+  new Swiper(".swiper-programs", {
+    direction: "horizontal",
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 15,
+    speed: 300,
+
+    scrollbar: {
+      el: ".swiper-scrollbar--programs",
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next--programs",
+      prevEl: ".swiper-button-prev--programs",
+    },
+
+    breakpoints: {
+      1200: {
+        allowTouchMove: false,
+        slidesPerView: 3,
+        spaceBetween: 32,
+      },
+      768: {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+      },
+    },
+  });
+};
+
 const initReviewSwiper = () => {
   // eslint-disable-next-line no-new
   new Swiper(".swiper-reviews", {
@@ -34,9 +66,8 @@ const initReviewSwiper = () => {
     spaceBetween: 15,
     speed: 300,
 
-    pagination: {
-      el: ".swiper-pagination--reviews",
-      type: "progressbar",
+    scrollbar: {
+      el: ".swiper-scrollbar--reviews",
     },
 
     navigation: {
@@ -60,6 +91,7 @@ const initReviewSwiper = () => {
 
 export const initSwipers = () => {
   initHeroSwiper();
+  initProgramsSwiper();
   //   initToursSwiper();
   //   initEducationSwiper();
   initReviewSwiper();
