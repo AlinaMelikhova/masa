@@ -4,6 +4,7 @@ import { Form } from "./modules/form-validate/form";
 import { handleMobileMenu } from "./modules/mobile-menu";
 import { initSwipers } from "./modules/my-swipers";
 import { initAccordions } from "./vendor/init-accordion";
+import { initTabs } from "./vendor/init-tabs";
 import "./modules/leaflet";
 
 // ---------------------------------
@@ -11,6 +12,7 @@ import "./modules/leaflet";
 window.addEventListener("DOMContentLoaded", () => {
   // Utils
   iosVhFix();
+  initTabs();
   initAccordions();
 
   // Modules

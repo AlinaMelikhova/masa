@@ -177,15 +177,3 @@
     }
   }
 }
-
-.hero__swiper-pagination {
-  background-color: $color-default-white;
-  border-radius: 20px 20px 0px 0px;
-  padding: 10px 20px;
-
-  &::before {
-    @include angle;
-    bottom: 0;
-    transform: rotate(270deg);
-  }
-}

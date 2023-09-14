@@ -12,14 +12,58 @@ const initHeroSwiper = () => {
     // },
 
     pagination: {
-      el: ".swiper-pagination",
+      el: ".swiper-pagination--hero",
       clickable: true,
-      // type: "bullets",
+      renderBullet(index, className) {
+        return (
+          '<span class="' + className + ' pagination-bullet--hero">' + "</span>"
+        );
+      },
     },
 
     breakpoints: {
       1200: {
         allowTouchMove: false,
+      },
+    },
+  });
+};
+
+const initNewsSwiper = () => {
+  // eslint-disable-next-line no-new
+  new Swiper(".swiper-news", {
+    direction: "horizontal",
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 300,
+
+    pagination: {
+      el: ".swiper-pagination--news",
+      clickable: true,
+      renderBullet(index, className) {
+        return (
+          '<span class="' +
+          className +
+          ' pagination-bullet--news">' +
+          (index + 1) +
+          "</span>"
+        );
+      },
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next--news",
+      prevEl: ".swiper-button-prev--news",
+    },
+
+    breakpoints: {
+      1200: {
+        allowTouchMove: false,
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 1,
       },
     },
   });
@@ -92,10 +136,8 @@ const initReviewSwiper = () => {
 export const initSwipers = () => {
   initHeroSwiper();
   initProgramsSwiper();
-  //   initToursSwiper();
-  //   initEducationSwiper();
+  initNewsSwiper();
   initReviewSwiper();
-  //   initGalleruSwiper();
 
   //   if (window.matchMedia('(min-width:1200px)').matches) {
   //     document.querySelector('.swiper-benefits').classList.add('swiper');
