@@ -9,6 +9,14 @@
   }
 }
 
+.swiper-news {
+  width: 100%;
+
+  @include vp-767 {
+    width: calc(100% - 30px);
+  }
+}
+
 .swiper-scrollbar {
   width: 91%;
   height: 2px;

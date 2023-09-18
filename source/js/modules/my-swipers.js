@@ -29,14 +29,43 @@ const initHeroSwiper = () => {
   });
 };
 
+// const initTabsListSwiper = () => {
+//   // eslint-disable-next-line no-new
+//   new Swiper(".swiper-tabs-list", {
+//     direction: "horizontal",
+//     loop: false,
+//     slidesPerView: "auto",
+//     spaceBetween: 12,
+//     speed: 300,
+
+//     breakpoints: {
+//       1200: {
+//         allowTouchMove: false,
+//         slidesPerView: 3,
+//         spaceBetween: 32,
+//       },
+//       768: {
+//         slidesPerView: "auto",
+//         spaceBetween: 10,
+//       },
+//     },
+//   });
+// };
+
 const initNewsSwiper = () => {
   // eslint-disable-next-line no-new
   new Swiper(".swiper-news", {
-    direction: "horizontal",
     loop: false,
-    slidesPerView: 1,
-    spaceBetween: 0,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    slideVisibleClass: "news__item--visible",
     speed: 300,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    grid: {
+      rows: 2,
+      fill: "column",
+    },
 
     pagination: {
       el: ".swiper-pagination--news",
@@ -60,10 +89,20 @@ const initNewsSwiper = () => {
     breakpoints: {
       1200: {
         allowTouchMove: false,
-        slidesPerView: 1,
+        slidesPerView: "auto",
+        spaceBetween: 32,
+        grid: {
+          rows: 1,
+          fill: "row",
+        },
       },
       768: {
-        slidesPerView: 1,
+        slidesPerView: 2,
+        spaceBetween: 30,
+        grid: {
+          rows: 2,
+          fill: "column",
+        },
       },
     },
   });
@@ -138,13 +177,4 @@ export const initSwipers = () => {
   initProgramsSwiper();
   initNewsSwiper();
   initReviewSwiper();
-
-  //   if (window.matchMedia('(min-width:1200px)').matches) {
-  //     document.querySelector('.swiper-benefits').classList.add('swiper');
-  //     document.querySelector('.benefits__list').classList.add('swiper-wrapper');
-  //     Array.from(document.querySelectorAll('.benefits__item')).forEach((slide) =>
-  //       slide.classList.add('swiper-slide')
-  //     );
-  //     initBenefitsSwiper();
-  //   }
 };

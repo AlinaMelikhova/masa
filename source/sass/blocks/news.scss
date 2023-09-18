@@ -1,11 +1,23 @@
 .news__container {
-  padding: 120px 0 0;
+  padding-top: 120px;
+
+  @include vp-1200 {
+    padding-top: 113px;
+  }
+
+  @include vp-767 {
+    padding-top: 72px;
+  }
 }
 
 .news__wrapper {
+  @include vp-767 {
+    padding: 0;
+  }
+
   h2 {
     text-align: center;
-    margin: 0 auto 40px;
+    margin: 0 auto;
   }
 }
 
@@ -13,14 +25,36 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  margin-bottom: 40x;
+  padding: 40px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include vp-1200 {
+    padding: 43px 0 30px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: scroll;
+  }
+
+  @include vp-767 {
+    margin-bottom: 0;
+    padding: 30px 3px 24px 15px;
+    position: relative;
+  }
 }
 
 .news__tabs-item {
   margin-right: 30px;
+
+  @include vp-1200 {
+    margin-right: 10px;
+    width: max-content;
+  }
+
+  @include vp-767 {
+    margin-right: 12px;
+  }
 }
 
 .news__tabs-button {
@@ -36,9 +70,25 @@
   border: none;
   cursor: pointer;
 
+  @include vp-1200 {
+    padding: 14px 20px;
+  }
+
+  @include vp-767 {
+    padding: 10px 14px;
+    font-size: 12px;
+    letter-spacing: 0.24px;
+  }
+
   &.is-active {
     border-radius: 20px;
     box-shadow: 0 0 0 1px $color-bright;
+  }
+}
+
+.news__tabs-wrapper {
+  @include vp-767 {
+    padding: 0 15px;
   }
 }
 
@@ -47,27 +97,59 @@
   margin: 0;
   list-style-type: none;
   margin-bottom: 40px;
-  display: flex;
+
+  @include vp-1200 {
+    margin-bottom: 30px;
+    height: 730px;
+  }
+
+  @include vp-767 {
+    height: 590px;
+    margin-bottom: 24px;
+  }
 }
 
 .news__item {
   padding: 46px 46px 0 0;
   border-radius: 12px;
-  height: 400px;
+  min-height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
-  max-width: 286px;
-  margin-right: 32px;
+  width: 286px;
+  box-sizing: border-box;
+
+  @include vp-1200 {
+    padding: 26px 84px 0 0;
+    height: 350px;
+    min-height: 350px;
+    width: auto;
+  }
+
+  @include vp-767 {
+    padding: 27px 27px 0 0;
+    height: 240px;
+    min-height: 240px;
+  }
 
   &:first-child {
-    max-width: 604px;
-    flex-grow: 1;
+    width: 604px;
+
+    @include vp-1200 {
+      max-width: none;
+    }
   }
 
   &:last-child {
     margin: 0;
+  }
+
+  &:nth-child(1 of .news__item--visible) {
+    @include vp-767 {
+      height: 330px;
+      min-height: 330px;
+    }
   }
 
   &--trainee {
@@ -79,11 +161,18 @@
   }
 
   &--career {
-    display: none;
     background-image: url("../img/news/news-career@2x.jpg");
 
     @include vp-767 {
       background-image: url("../img/news/news-career-mob@2x.jpg");
+    }
+
+    &-dt {
+      display: none;
+
+      @include vp-1200 {
+        display: flex;
+      }
     }
   }
 
@@ -138,6 +227,10 @@
       left: 0;
       transform: rotate(270deg);
       background-image: url("../img/svg/angle-beige.svg");
+
+      @include vp-767 {
+        top: -10px;
+      }
     }
   }
 
@@ -155,6 +248,19 @@
     position: relative;
     max-width: 80%;
 
+    @include vp-1200 {
+      font-size: 20px;
+      padding: 10px 18px 6px 0px;
+      line-height: 24px;
+      max-width: 70%;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      padding: 10px 18px 4px 0px;
+      line-height: 18px;
+    }
+
     &::before {
       @include angle;
       bottom: 0;
@@ -170,6 +276,10 @@
   border-radius: 0px 12px;
   background: $color-light;
   position: relative;
+
+  @include vp-767 {
+    padding: 12px 10px 10px 0px;
+  }
 
   &::before {
     @include angle;
@@ -187,6 +297,15 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
+
+    @include vp-1200 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }
 
@@ -195,4 +314,8 @@
   flex-shrink: 0;
   width: 30px;
   height: 30px;
+
+  @include vp-767 {
+    margin-left: 10px;
+  }
 }
