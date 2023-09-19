@@ -209,7 +209,11 @@
                           организациях.
                         </p>
                         <div class="hero__button-wrapper">
-                          <a class="primary-button" href="#">
+                          <a
+                            class="primary-button"
+                            href="#"
+                            data-open-modal="feedback"
+                          >
                             <span>подробнее</span>
                             <span class="hero__link-icon arrow-button"></span>
                           </a>
@@ -238,7 +242,11 @@
                           хозяйства, устойчивого образа жизни и&nbsp;другое.
                         </p>
                         <div class="hero__button-wrapper">
-                          <a class="primary-button" href="#">
+                          <a
+                            class="primary-button"
+                            href="#"
+                            data-open-modal="feedback"
+                          >
                             <span>подробнее</span>
                             <span class="hero__link-icon arrow-button"></span>
                           </a>
@@ -268,7 +276,11 @@
                           израильский стиль жизни!
                         </p>
                         <div class="hero__button-wrapper">
-                          <a class="primary-button" href="#">
+                          <a
+                            class="primary-button"
+                            href="#"
+                            data-open-modal="feedback"
+                          >
                             <span>подробнее</span>
                             <span class="hero__link-icon arrow-button"></span>
                           </a>
@@ -1680,38 +1692,40 @@
                       method="post"
                     >
                       <div class="form__form-input-container">
-                        <label
-                          for="name"
-                          data-validate-type="text"
-                          data-limitation="letters"
-                          data-required
-                        >
-                          <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            placeholder=""
-                            required
-                          />
-                          <p>Имя</p>
-                          <span></span>
-                        </label>
-                        <label
-                          for="user-tel-number"
-                          data-matrix-limitation="digit"
-                          data-validate-type="phone"
-                          data-required
-                        >
-                          <input
-                            type="tel"
-                            name="user-tel-number"
-                            id="user-tel-number"
-                            placeholder=""
-                            required
-                          />
-                          <p>Телефон</p>
-                          <span></span>
-                        </label>
+                        <div class="form__text-input-wrapper">
+                          <label
+                            for="name"
+                            data-validate-type="text"
+                            data-limitation="letters"
+                            data-required
+                          >
+                            <input
+                              type="text"
+                              name="name"
+                              id="name"
+                              placeholder=""
+                              required
+                            />
+                            <p>Имя</p>
+                            <span></span>
+                          </label>
+                          <label
+                            for="user-tel-number"
+                            data-matrix-limitation="digit"
+                            data-validate-type="phone"
+                            data-required
+                          >
+                            <input
+                              type="tel"
+                              name="user-tel-number"
+                              id="user-tel-number"
+                              placeholder=""
+                              required
+                            />
+                            <p>Телефон</p>
+                            <span></span>
+                          </label>
+                        </div>
                         <div class="form__message-wrapper">
                           <label
                             for="user-message"
@@ -1940,49 +1954,156 @@
     </div>
 
     <!-- Модалки -->
-    <!-- <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+        <div
+          class="modal__content form__description-wrapper form-modal__content"
+        >
+          <h2>Напишите нам</h2>
+          <p>
+            Оставьте ваши контакты, если у&nbsp;вас остались
+            вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!
+          </p>
+          <div
+            class="form__input-wrapper form-modal__input-wrapper"
+            data-callback="base"
+            data-form-validate
+          >
+            <form
+              class="form__form form-modal__form"
+              action="https://echo.htmlacademy.ru/"
+              method="post"
+            >
+              <div
+                class="form__form-input-container form-modal__form-input-container"
+              >
+                <div
+                  class="form-modal__text-input-wrapper form__text-input-wrapper"
+                >
+                  <label
+                    for="name-modal"
+                    data-validate-type="text"
+                    data-limitation="letters"
+                    data-required
+                  >
+                    <input
+                      type="text"
+                      name="name-modal"
+                      id="name-modal"
+                      placeholder=""
+                      required
+                    />
+                    <p>Имя</p>
+                    <span></span>
+                  </label>
+                  <label
+                    for="user-tel-number-modal"
+                    data-matrix-limitation="digit"
+                    data-validate-type="phone"
+                    data-required
+                  >
+                    <input
+                      type="tel"
+                      name="user-tel-number-modal"
+                      id="user-tel-number-modal"
+                      placeholder=""
+                      required
+                    />
+                    <p>Телефон</p>
+                    <span></span>
+                  </label>
+                </div>
+
+                <div
+                  class="form__select form-modal__select custom-select custom-select-modal"
+                >
+                  <button
+                    role="combobox"
+                    aria-labelledby="select button"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-controls="select-dropdown"
+                  >
+                    <span></span>
+                    <svg
+                      role="img"
+                      aria-label="arrow."
+                      width="16"
+                      height="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                    >
+                      <use href="./img/sprite.svg#select-arrow" />
+                    </svg>
+                  </button>
+                  <ul role="listbox" id="select-dropdown">
+                    <li role="option">
+                      <input type="radio" id="spb-modal" name="city" />
+                      <label for="spb-modal">Санкт-Петербург</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="moscow-modal" name="city" />
+                      <label for="moscow-modal">Санкт-Петербург</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="novosib-modal" name="city" />
+                      <label for="novosib-modal">Санкт-Петербург</label>
+                    </li>
+                    <li role="option">
+                      <input type="radio" id="smolensk-modal" name="city" />
+                      <label for="smolensk-modal">Санкт-Петербург</label>
+                    </li>
+                  </ul>
+                  <p>Выберите город</p>
+                </div>
+
+                <div
+                  class="form__checkbox-wrapper form-modal__checkbox-wrapper"
+                >
+                  <label
+                    for="checkbox-policy-modal"
+                    data-matrix-limitation="letters-and-digit"
+                    data-validate-type="text"
+                    data-required
+                  >
+                    <input
+                      type="checkbox"
+                      name="checkbox-policy"
+                      id="checkbox-policy-modal"
+                      required
+                    />
+                    <p>Я согласен на обработку моих персональных данных</p>
+                  </label>
+                </div>
+
+                <button class="form-modal__button primary-button" type="submit">
+                  <span>отправить</span>
+                  <span class="hero__link-icon arrow-button"></span>
+                </button>
+              </div>
+            </form>
+          </div>
           <button
             class="modal__close-btn btn-reset"
             type="button"
             aria-label="Закрыть попап"
             data-close-modal
           >
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
+            <svg
+              role="img"
+              aria-label="cross."
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <use xlink:href="img/sprite.svg#cross"></use>
             </svg>
           </button>
         </div>
       </div>
     </div>
-
-    <div
-      class="modal modal--preload modal--fit-content modal--no-scale"
-      data-modal="success"
-    >
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">
-            Размер этой модалки зависит от ширины контента,<br />
-            отключена анимация-скейл
-          </p>
-          <button
-            class="modal__close-btn btn-reset"
-            type="button"
-            aria-label="Закрыть попап"
-            data-close-modal
-          >
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div> -->
 
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"

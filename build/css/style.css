@@ -3430,9 +3430,29 @@ button,
     line-height: 14px;
   }
 }
-.form__form-input-container input:not([type=radio]):not([type=checkbox]),
-.form__form-input-container select,
-.form__form-input-container textarea {
+
+.form__text-input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.form__text-input-wrapper > label {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+.form__text-input-wrapper input {
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 16px 25px;
@@ -3443,39 +3463,23 @@ button,
   line-height: 100%;
   font-family: "Manrope", "Arial", sans-serif;
 }
-.form__form-input-container input:not([type=radio]):not([type=checkbox]):not(:disabled):hover,
-.form__form-input-container select:not(:disabled):hover,
-.form__form-input-container textarea:not(:disabled):hover {
+.form__text-input-wrapper input:not(:disabled):hover {
   border: 1px solid #ffffff;
 }
-.form__form-input-container input:not([type=radio]):not([type=checkbox]):not(:disabled):focus-visible, .form__form-input-container input:not([type=radio]):not([type=checkbox]):not(:disabled):active,
-.form__form-input-container select:not(:disabled):focus-visible,
-.form__form-input-container select:not(:disabled):active,
-.form__form-input-container textarea:not(:disabled):focus-visible,
-.form__form-input-container textarea:not(:disabled):active {
+.form__text-input-wrapper input:not(:disabled):focus-visible, .form__text-input-wrapper input:not(:disabled):active {
   border: 1px solid #ffffff;
   outline: none;
   background-color: rgba(255, 255, 255, 0);
 }
-.form__form-input-container input:not([type=radio]):not([type=checkbox]):disabled,
-.form__form-input-container select:disabled,
-.form__form-input-container textarea:disabled {
+.form__text-input-wrapper input:disabled {
   border: 1px solid #ffffff;
   opacity: 0.4;
   background: rgba(255, 255, 255, 0.2);
 }
-.form__form-input-container input:not([type=radio]):not([type=checkbox]):not(:disabled):hover ~ p, .form__form-input-container input:not([type=radio]):not([type=checkbox]):not(:disabled):focus-visible ~ p, .form__form-input-container input:not([type=radio]):not([type=checkbox]):not(:disabled):active ~ p,
-.form__form-input-container select:not(:disabled):hover ~ p,
-.form__form-input-container select:not(:disabled):focus-visible ~ p,
-.form__form-input-container select:not(:disabled):active ~ p,
-.form__form-input-container textarea:not(:disabled):hover ~ p,
-.form__form-input-container textarea:not(:disabled):focus-visible ~ p,
-.form__form-input-container textarea:not(:disabled):active ~ p {
+.form__text-input-wrapper input:not(:disabled):hover ~ p, .form__text-input-wrapper input:not(:disabled):focus-visible ~ p, .form__text-input-wrapper input:not(:disabled):active ~ p {
   opacity: 1;
 }
-.form__form-input-container input:not([type=radio]):not([type=checkbox]):disabled ~ p,
-.form__form-input-container select:disabled ~ p,
-.form__form-input-container textarea:disabled ~ p {
+.form__text-input-wrapper input:disabled ~ p {
   opacity: 0.6;
 }
 
@@ -3491,14 +3495,35 @@ button,
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
 }
-.form__message-wrapper input {
-  height: 100px;
+.form__message-wrapper textarea {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 25px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 100%;
+  font-family: "Manrope", "Arial", sans-serif;
 }
-
-.is-invalid input,
-.is-invalid textarea {
-  border: 1px solid #ff5e66;
-  background-color: rgba(255, 94, 102, 0.2);
+.form__message-wrapper textarea:not(:disabled):hover {
+  border: 1px solid #ffffff;
+}
+.form__message-wrapper textarea:not(:disabled):focus-visible, .form__message-wrapper textarea:not(:disabled):active {
+  border: 1px solid #ffffff;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+.form__message-wrapper textarea:disabled {
+  border: 1px solid #ffffff;
+  opacity: 0.4;
+  background: rgba(255, 255, 255, 0.2);
+}
+.form__message-wrapper textarea:not(:disabled):hover ~ p, .form__message-wrapper textarea:not(:disabled):focus-visible ~ p, .form__message-wrapper textarea:not(:disabled):active ~ p {
+  opacity: 1;
+}
+.form__message-wrapper textarea:disabled ~ p {
+  opacity: 0.6;
 }
 
 .form__select {
@@ -3520,6 +3545,7 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .form__checkbox-wrapper input {
   -webkit-appearance: none;
@@ -3588,6 +3614,128 @@ button,
   .form__checkbox-wrapper p {
     line-height: 14px;
   }
+}
+
+.is-invalid input,
+.is-invalid textarea {
+  border: 1px solid #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
+}
+
+.form-modal__content h2 {
+  margin: 0 auto 20px;
+  text-align: center;
+  color: #316dc2;
+}
+@media (max-width: 767px) {
+  .form-modal__content h2 {
+    margin-bottom: 15px;
+  }
+}
+.form-modal__content > p {
+  color: #484848;
+  text-align: center;
+  opacity: 1;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .form-modal__content > p {
+    margin-bottom: 25px;
+  }
+}
+
+.form-modal__form-input-container p {
+  color: #484848;
+}
+.form-modal__form-input-container textarea {
+  border: 1px solid rgba(72, 72, 72, 0.3);
+}
+.form-modal__form-input-container textarea:not(:disabled):hover, .form-modal__form-input-container textarea:not(:disabled):focus-visible, .form-modal__form-input-container textarea:not(:disabled):active {
+  border: 1px solid #484848;
+  color: #484848;
+}
+.form-modal__form-input-container textarea:disabled {
+  border: 1px solid rgba(169, 175, 183, 0.5);
+  background-color: rgba(169, 175, 183, 0.2);
+}
+.form-modal__form-input-container textarea:disabled ~ p {
+  opacity: 0.6;
+}
+
+.form-modal__text-input-wrapper input {
+  border: 1px solid rgba(72, 72, 72, 0.3);
+}
+.form-modal__text-input-wrapper input:not(:disabled):hover, .form-modal__text-input-wrapper input:not(:disabled):focus-visible, .form-modal__text-input-wrapper input:not(:disabled):active {
+  border: 1px solid #484848;
+  color: #484848;
+}
+.form-modal__text-input-wrapper input:disabled {
+  border: 1px solid rgba(169, 175, 183, 0.5);
+  background-color: rgba(169, 175, 183, 0.2);
+}
+.form-modal__text-input-wrapper input:disabled ~ p {
+  opacity: 0.6;
+}
+
+.form-modal__checkbox-wrapper {
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .form-modal__checkbox-wrapper {
+    margin-bottom: 25px;
+  }
+}
+.form-modal__checkbox-wrapper input {
+  -webkit-box-shadow: inset 0 0 0 1px #316dc2;
+          box-shadow: inset 0 0 0 1px #316dc2;
+}
+.form-modal__checkbox-wrapper input:checked {
+  background: #316dc2;
+}
+.form-modal__checkbox-wrapper input:checked::before {
+  background-image: url("../img/svg/checkbox-white.svg");
+}
+.form-modal__checkbox-wrapper input:checked:not(:disabled):hover, .form-modal__checkbox-wrapper input:checked:not(:disabled):focus-visible {
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: inset 0 0 0 1px #316dc2;
+          box-shadow: inset 0 0 0 1px #316dc2;
+}
+.form-modal__checkbox-wrapper input:checked:not(:disabled):hover::before, .form-modal__checkbox-wrapper input:checked:not(:disabled):focus-visible::before {
+  background-image: url("../img/svg/checkbox.svg");
+}
+.form-modal__checkbox-wrapper input:not(:disabled):hover, .form-modal__checkbox-wrapper input:not(:disabled):focus-visible {
+  -webkit-box-shadow: inset 0 0 0 1px #275699;
+          box-shadow: inset 0 0 0 1px #275699;
+}
+.form-modal__checkbox-wrapper input:disabled {
+  -webkit-box-shadow: inset 0 0 0 1px #a9afb7;
+          box-shadow: inset 0 0 0 1px #a9afb7;
+  background-color: #ffffff;
+  opacity: 0.6;
+}
+.form-modal__checkbox-wrapper input:checked:disabled {
+  background: #a9afb7;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.form-modal__checkbox-wrapper input:checked:disabled::before {
+  background-image: url("../img/svg/checkbox-white.svg");
+}
+.form-modal__checkbox-wrapper p {
+  color: #484848;
+}
+
+.form-modal__button {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.is-invalid input,
+.is-invalid textarea {
+  border: 1px solid #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
 }
 
 .reviews__container {
@@ -4598,27 +4746,39 @@ button,
 }
 .modal__content {
   position: relative;
-  width: 600px;
-  padding: 40px;
+  width: 510px;
+  padding: 60px 80px;
+  border-radius: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #ffffff;
 }
 @media (max-width: 767px) {
   .modal__content {
     width: 100%;
-    padding: 20px;
+    padding: 40px 15px;
   }
 }
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 30px;
+  right: 30px;
   z-index: 1;
-  width: 40px;
-  height: 40px;
+  width: 22px;
+  height: 22px;
   padding: 0;
   background: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .modal--responsive .modal__content {
   width: 100%;
@@ -4970,6 +5130,7 @@ button,
   transition: -webkit-transform ease-in-out 0.3s;
   transition: transform ease-in-out 0.3s;
   transition: transform ease-in-out 0.3s, -webkit-transform ease-in-out 0.3s;
+  stroke: #ffffff;
 }
 .custom-select.active svg {
   -webkit-transform: rotate(180deg);
@@ -5037,6 +5198,27 @@ button,
 .custom-select input[type=radio]:checked ~ label, .custom-select input[type=radio]:focus-visible ~ label, .custom-select input[type=radio]:focus-within ~ label {
   background-color: #316dc2;
   color: #ffffff;
+}
+
+.custom-select-modal p {
+  color: #484848;
+}
+.custom-select-modal button {
+  color: #484848;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+}
+.custom-select-modal button:focus-visible {
+  border: 1px solid #484848;
+}
+.custom-select-modal:hover button {
+  border: 1px solid #484848;
+}
+.custom-select-modal svg {
+  stroke: #484848;
+}
+.custom-select-modal ul {
+  -webkit-box-shadow: inset 0 0 0 1px #484848;
+          box-shadow: inset 0 0 0 1px #484848;
 }
 
 @media (max-width: 1199px) {

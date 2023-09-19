@@ -1,0 +1,135 @@
+.form-modal__content {
+  h2 {
+    margin: 0 auto 20px;
+    text-align: center;
+    color: $color-bright;
+
+    @include vp-767 {
+      margin-bottom: 15px;
+    }
+  }
+
+  & > p {
+    color: $color-dark;
+    text-align: center;
+    opacity: 1;
+    margin-bottom: 30px;
+
+    @include vp-767 {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.form-modal__form-input-container {
+  p {
+    color: $color-dark;
+  }
+
+  textarea {
+    border: 1px solid rgba(72, 72, 72, 0.3);
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus-visible,
+    &:not(:disabled):active {
+      border: 1px solid $color-dark;
+      color: $color-dark;
+    }
+
+    &:disabled {
+      border: 1px solid rgba(169, 175, 183, 0.5);
+      background-color: rgba(169, 175, 183, 0.2);
+    }
+
+    &:disabled ~ p {
+      opacity: 0.6;
+    }
+  }
+}
+
+.form-modal__text-input-wrapper {
+  input {
+    border: 1px solid rgba(72, 72, 72, 0.3);
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus-visible,
+    &:not(:disabled):active {
+      border: 1px solid $color-dark;
+      color: $color-dark;
+    }
+
+    &:disabled {
+      border: 1px solid rgba(169, 175, 183, 0.5);
+      background-color: rgba(169, 175, 183, 0.2);
+    }
+
+    &:disabled ~ p {
+      opacity: 0.6;
+    }
+  }
+}
+
+.form-modal__checkbox-wrapper {
+  margin-bottom: 30px;
+
+  @include vp-767 {
+    margin-bottom: 25px;
+  }
+
+  input {
+    box-shadow: inset 0 0 0 1px $color-bright;
+
+    &:checked {
+      background: $color-bright;
+    }
+
+    &:checked::before {
+      background-image: url("../img/svg/checkbox-white.svg");
+    }
+
+    &:checked:not(:disabled):hover,
+    &:checked:not(:disabled):focus-visible {
+      background: $color-transparent;
+      box-shadow: inset 0 0 0 1px $color-bright;
+
+      &::before {
+        background-image: url("../img/svg/checkbox.svg");
+      }
+    }
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus-visible {
+      box-shadow: inset 0 0 0 1px $color-dark-bright;
+    }
+
+    &:disabled {
+      box-shadow: inset 0 0 0 1px $color-disabled;
+      background-color: $color-default-white;
+      opacity: 0.6;
+    }
+
+    &:checked:disabled {
+      background: $color-disabled;
+      box-shadow: none;
+
+      &::before {
+        background-image: url("../img/svg/checkbox-white.svg");
+      }
+    }
+  }
+
+  p {
+    color: $color-dark;
+  }
+}
+
+.form-modal__button {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.is-invalid input,
+.is-invalid textarea {
+  border: 1px solid #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
+}

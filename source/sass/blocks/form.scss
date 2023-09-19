@@ -120,10 +120,21 @@
       line-height: 14px;
     }
   }
+}
 
-  input:not([type="radio"]):not([type="checkbox"]),
-  select,
-  textarea {
+.form__text-input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  & > label {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  input {
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 16px 25px;
@@ -172,15 +183,44 @@
     flex-direction: column-reverse;
   }
 
-  input {
-    height: 100px;
-  }
-}
+  textarea {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 16px 25px;
+    background-color: $color-transparent;
+    width: 100%;
+    color: $color-default-white;
+    font-size: 18px;
+    line-height: 100%;
+    font-family: $font-regular;
 
-.is-invalid input,
-.is-invalid textarea {
-  border: 1px solid #ff5e66;
-  background-color: rgba(255, 94, 102, 0.2);
+    &:not(:disabled):hover {
+      border: 1px solid $color-default-white;
+    }
+
+    &:not(:disabled):focus-visible,
+    &:not(:disabled):active {
+      border: 1px solid $color-default-white;
+      outline: none;
+      background-color: $color-transparent;
+    }
+
+    &:disabled {
+      border: 1px solid $color-default-white;
+      opacity: 0.4;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    &:not(:disabled):hover ~ p,
+    &:not(:disabled):focus-visible ~ p,
+    &:not(:disabled):active ~ p {
+      opacity: 1;
+    }
+
+    &:disabled ~ p {
+      opacity: 0.6;
+    }
+  }
 }
 
 .form__select {
@@ -197,6 +237,7 @@
   label {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   input {
@@ -270,4 +311,10 @@
       line-height: 14px;
     }
   }
+}
+
+.is-invalid input,
+.is-invalid textarea {
+  border: 1px solid #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
 }
