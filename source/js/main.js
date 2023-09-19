@@ -6,6 +6,7 @@ import { initSwipers } from "./modules/my-swipers";
 import { initAccordions } from "./vendor/init-accordion";
 import { initTabs } from "./vendor/init-tabs";
 import "./modules/leaflet";
+import "./modules/form-select";
 
 // ---------------------------------
 

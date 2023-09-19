@@ -1729,78 +1729,69 @@
                             <span></span>
                           </label>
                         </div>
-                        <label for="user-city">
-                          <select
-                            name="user-city"
-                            id="user-city"
-                            placeholder=""
-                            required
+
+                        <div class="form__select custom-select">
+                          <button
+                            role="combobox"
+                            aria-labelledby="select button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                            aria-controls="select-dropdown"
                           >
-                            <option hidden></option>
-                            <option value="spb">Санкт-Петербург</option>
-                            <option value="spb">Санкт-Петербург</option>
-                            <option value="spb">Санкт-Петербург</option>
-                            <option value="spb">Санкт-Петербург</option>
-                          </select>
+                            <span></span>
+                            <svg
+                              role="img"
+                              aria-label="arrow."
+                              width="16"
+                              height="16"
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 16 16"
+                            >
+                              <use href="./img/sprite.svg#select-arrow" />
+                            </svg>
+                          </button>
+                          <ul role="listbox" id="select-dropdown">
+                            <li role="option">
+                              <input type="radio" id="spb" name="city" />
+                              <label for="spb">Санкт-Петербург</label>
+                            </li>
+                            <li role="option">
+                              <input type="radio" id="moscow" name="city" />
+                              <label for="moscow">Санкт-Петербург</label>
+                            </li>
+                            <li role="option">
+                              <input type="radio" id="novosib" name="city" />
+                              <label for="novosib">Санкт-Петербург</label>
+                            </li>
+                            <li role="option">
+                              <input type="radio" id="smolensk" name="city" />
+                              <label for="smolensk">Санкт-Петербург</label>
+                            </li>
+                          </ul>
                           <p>Выберите город</p>
-                        </label>
-                        <div class="__select" data-state="">
-                          <div
-                            class="__select__title"
-                            data-default="Option 0"
-                          ></div>
-                          <div class="__select__content">
-                            <input
-                              id="singleSelect0"
-                              class="__select__input"
-                              type="radio"
-                              name="singleSelect"
-                              checked
-                            />
-                            <label
-                              for="singleSelect0"
-                              class="__select__label"
-                            ></label>
-                            <input
-                              id="singleSelect1"
-                              class="__select__input"
-                              type="radio"
-                              name="singleSelect"
-                            />
-                            <label for="singleSelect1" class="__select__label"
-                              >Санкт-Петербург</label
-                            >
-                            <input
-                              id="singleSelect2"
-                              class="__select__input"
-                              type="radio"
-                              name="singleSelect"
-                            />
-                            <label for="singleSelect2" class="__select__label"
-                              >Санкт-Петербург</label
-                            >
-                            <input
-                              id="singleSelect3"
-                              class="__select__input"
-                              type="radio"
-                              name="singleSelect"
-                            />
-                            <label for="singleSelect3" class="__select__label"
-                              >Санкт-Петербург</label
-                            >
-                            <input
-                              id="singleSelect4"
-                              class="__select__input"
-                              type="radio"
-                              name="singleSelect"
-                            />
-                            <label for="singleSelect4" class="__select__label"
-                              >Санкт-Петербург</label
-                            >
-                          </div>
                         </div>
+
+                        <div class="form__checkbox-wrapper">
+                          <label
+                            for="checkbox-policy"
+                            data-matrix-limitation="letters-and-digit"
+                            data-validate-type="text"
+                            data-required
+                          >
+                            <input
+                              type="checkbox"
+                              name="checkbox-policy"
+                              id="checkbox-policy"
+                              required
+                            />
+                            <p>
+                              Я согласен на обработку моих персональных данных
+                            </p>
+                          </label>
+                        </div>
+
                         <button
-                          class="form__button primary-button"
+                          class="form__button primary-button primary-button--darkbg"
                           type="submit"
                         >
                           <span>отправить</span>
