@@ -1,11 +1,11 @@
 .form-modal__content {
   h2 {
-    margin: 0 auto 20px;
+    margin: 0 auto 8px;
     text-align: center;
     color: $color-bright;
 
     @include vp-767 {
-      margin-bottom: 15px;
+      margin-bottom: 22px;
     }
   }
 
@@ -13,7 +13,7 @@
     color: $color-dark;
     text-align: center;
     opacity: 1;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
 
     @include vp-767 {
       margin-bottom: 25px;

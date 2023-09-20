@@ -76,38 +76,32 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 321px;
-
-  @include vp-1200 {
-    min-height: 269px;
-  }
-
-  @include vp-767 {
-    min-height: 289px;
-  }
 
   h2 {
     margin: 0;
-    padding: 40px 50px 30px;
+    padding: 43px 50px 28px;
     color: $color-bright;
     font-family: $font-regular;
-    font-size: 54px;
+    font-size: 52px;
     font-style: normal;
     font-weight: 400;
     line-height: 62px;
     background-color: $color-default-white;
     border-radius: 0px 30px 30px 0px;
+    letter-spacing: -0.5px;
 
     @include vp-1200 {
       font-size: 36px;
       line-height: 44px;
-      padding: 30px 40px 24px 40px;
+      padding: 33px 40px 24px 40px;
+      letter-spacing: -1.1px;
     }
 
     @include vp-767 {
-      font-size: 22px;
+      font-size: 23px;
       line-height: 26px;
       padding: 20px 14px 16px 14px;
+      border-radius: 0px 16px 16px 0px;
     }
   }
 }
@@ -115,7 +109,7 @@
 .hero__description-wrapper {
   background-color: $color-default-white;
   border-radius: 0px 0px 30px 30px;
-  padding: 0 50px 35px;
+  padding: 0 50px 27px;
   display: flex;
   align-items: center;
   position: relative;
@@ -123,10 +117,14 @@
   &::before {
     @include angle;
     top: 0;
+
+    @include vp-767 {
+      left: calc(100% - 29px);
+    }
   }
 
   @include vp-1200 {
-    padding: 0px 40px 35px 40px;
+    padding: 0px 40px 32px 40px;
   }
 
   @include vp-767 {
@@ -138,13 +136,13 @@
 
   p {
     margin: 0;
-    margin-right: 30px;
+    margin-top: -7px;
+    margin-right: 25px;
     padding: 0;
-    padding-top: 8px;
     max-width: 450px;
     color: $color-dark;
     font-family: $font-regular;
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
@@ -156,10 +154,13 @@
     }
 
     @include vp-767 {
-      padding: 0px 14px 15px 14px;
+      padding: 0px 14px 10px 14px;
       background-color: $color-default-white;
       margin: 0;
       border-radius: 0px 0px 14px 0px;
+      max-width: 90%;
+      font-size: 13px;
+      margin-top: -5px;
     }
   }
 }
@@ -174,6 +175,18 @@
     &::before {
       @include angle;
       top: 0;
+    }
+  }
+
+  a {
+    margin-top: -9px;
+
+    @include vp-1200 {
+      margin-top: -25px;
+    }
+
+    @include vp-767 {
+      margin-top: 0;
     }
   }
 }

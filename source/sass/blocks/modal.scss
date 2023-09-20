@@ -37,7 +37,7 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
+    padding: 84px 40px 60px;
 
     @include vp-767 {
       padding: 60px 16px;
@@ -59,7 +59,7 @@
     position: relative;
 
     width: 510px;
-    padding: 60px 80px;
+    padding: 53px 80px 60px;
     border-radius: 16px;
     box-sizing: border-box;
 
@@ -67,7 +67,7 @@
 
     @include vp-767 {
       width: 100%;
-      padding: 40px 15px;
+      padding: 36px 13px;
     }
   }
 

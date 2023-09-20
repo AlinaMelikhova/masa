@@ -7,12 +7,12 @@
   background-repeat: no-repeat;
   background-image: url("../img/svg/angle.svg");
   background-position: 0 0;
-  left: 100%;
+  left: calc(100% - 1px);
 
   @include vp-767 {
-    width: 10px;
-    height: 10px;
-    background-size: 10px 10px;
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
   }
 }
 

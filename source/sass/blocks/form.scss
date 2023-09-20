@@ -19,6 +19,7 @@
   top: 0;
   left: 0;
   height: 100%;
+  border-radius: 16px;
 
   @include vp-767 {
     display: none;
@@ -28,14 +29,14 @@
 .form__description-wrapper {
   position: relative;
   z-index: 10;
-  padding: 89px 74px 51px;
+  padding: 82px 74px 51px;
   background-color: $color-bright;
   border-radius: 16px;
-  width: 500px;
+  width: 498px;
 
   @include vp-1200 {
     width: 442px;
-    padding: 50px 45px;
+    padding: 61px 45px 58px;
   }
 
   @include vp-767 {
@@ -45,7 +46,7 @@
 
   h2 {
     margin: 0;
-    margin-bottom: 38px;
+    margin-bottom: 25px;
     padding: 0;
     color: $color-default-white;
     font-family: $font-regular;
@@ -53,40 +54,42 @@
     font-style: normal;
     font-weight: 400;
     line-height: 36px;
+    letter-spacing: -0.8px;
 
     @include vp-1200 {
       font-size: 28px;
       line-height: 100%;
-      margin-bottom: 35px;
+      margin-bottom: 27px;
     }
 
     @include vp-767 {
       font-size: 18px;
       line-height: 22px;
-      margin-bottom: 26px;
+      margin-bottom: 18px;
     }
   }
 
   p {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 19px;
     padding: 0;
     color: $color-light;
     font-family: $font-regular;
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
     opacity: 0.9;
 
     @include vp-1200 {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
       line-height: 20px;
     }
 
     @include vp-767 {
       font-size: 14px;
-      margin-bottom: 30px;
+      margin-bottom: 26px;
+      letter-spacing: -0.4px;
     }
   }
 }
@@ -97,7 +100,7 @@
 
   & > label {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
     padding: 0;
     display: flex;
     flex-direction: column-reverse;
@@ -105,7 +108,7 @@
 
   p {
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 7px;
     padding: 0;
     opacity: 0.8;
     color: $color-light;
@@ -118,6 +121,7 @@
     @include vp-767 {
       font-size: 12px;
       line-height: 14px;
+      margin-bottom: 11px;
     }
   }
 }
@@ -128,16 +132,20 @@
 
   & > label {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
     padding: 0;
     display: flex;
     flex-direction: column-reverse;
+
+    @include vp-767 {
+      margin-bottom: 20px;
+    }
   }
 
   input {
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 16px 25px;
+    padding: 12px 25px;
     background-color: $color-transparent;
     width: 100%;
     color: $color-default-white;
@@ -181,12 +189,16 @@
     padding: 0;
     display: flex;
     flex-direction: column-reverse;
+
+    @include vp-1200 {
+      margin-bottom: 18px;
+    }
   }
 
   textarea {
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 16px 25px;
+    padding: 12px 25px;
     background-color: $color-transparent;
     width: 100%;
     color: $color-default-white;
@@ -301,11 +313,12 @@
     margin: 0;
     color: $color-default-white;
     font-family: $font-regular;
-    font-size: 12px;
+    font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: 12px;
     opacity: 0.9;
+    letter-spacing: 0.2px;
 
     @include vp-767 {
       line-height: 14px;

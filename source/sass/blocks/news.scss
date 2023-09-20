@@ -1,12 +1,12 @@
 .news__container {
-  padding-top: 120px;
+  padding-top: 122px;
 
   @include vp-1200 {
-    padding-top: 113px;
+    padding-top: 106px;
   }
 
   @include vp-767 {
-    padding-top: 72px;
+    padding-top: 68px;
   }
 }
 
@@ -25,13 +25,13 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  padding: 40px 0;
+  padding: 42px 0 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
   @include vp-1200 {
-    padding: 43px 0 30px;
+    padding: 36px 0 30px 5px;
     flex-wrap: nowrap;
     justify-content: flex-start;
     overflow: scroll;
@@ -39,7 +39,7 @@
 
   @include vp-767 {
     margin-bottom: 0;
-    padding: 30px 3px 24px 15px;
+    padding: 27px 3px 25px 15px;
     position: relative;
   }
 }
@@ -48,34 +48,38 @@
   margin-right: 30px;
 
   @include vp-1200 {
-    margin-right: 10px;
+    margin-right: 12px;
     width: max-content;
   }
 
   @include vp-767 {
-    margin-right: 12px;
+    margin-right: 14px;
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 }
 
 .news__tabs-button {
-  padding: 14px 26px;
+  padding: 12px 26px;
   color: $color-bright;
   font-family: $font-regular;
-  font-size: 14px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: 0.28px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
 
   @include vp-1200 {
-    padding: 14px 20px;
+    padding: 12px 19px;
   }
 
   @include vp-767 {
-    padding: 10px 14px;
+    padding: 7px 12px;
     font-size: 12px;
     letter-spacing: 0.24px;
   }
@@ -135,6 +139,17 @@
 
   &:first-child {
     width: 604px;
+    padding: 46px 215px 0 0;
+
+    & h3 {
+      max-width: 292px;
+      line-height: 22px;
+      letter-spacing: -0.3px;
+    }
+
+    & span {
+      padding: 8px 10px 6px 0;
+    }
 
     @include vp-1200 {
       max-width: none;
@@ -155,8 +170,24 @@
   &--trainee {
     background-image: url("../img/news/news-trainee@2x.jpg");
 
+    @include vp-1200 {
+      background-image: url("../img/news/news-trainee-tab@2x.jpg");
+    }
+
     @include vp-767 {
       background-image: url("../img/news/news-trainee-mob@2x.jpg");
+    }
+  }
+
+  &--trainee-tab {
+    display: none;
+
+    @include vp-1200 {
+      display: flex;
+    }
+
+    @include vp-767 {
+      display: none;
     }
   }
 
@@ -200,7 +231,7 @@
   justify-content: flex-start;
 
   span {
-    padding: 12px 12px 6px 0px;
+    padding: 8px 12px 6px 0px;
     border-radius: 0px 12px 0px 0px;
     background: $color-light;
     color: $color-bright;
@@ -228,37 +259,48 @@
       transform: rotate(270deg);
       background-image: url("../img/svg/angle-beige.svg");
 
-      @include vp-767 {
-        top: -10px;
+      @include vp-1200 {
+        padding: 9px 12px 6px 0;
       }
+
+      @include vp-767 {
+        top: -16px;
+      }
+    }
+
+    @include vp-767 {
+      padding: 9px 12px 6px 0;
     }
   }
 
   h3 {
-    padding: 18px 18px 6px 0px;
-    border-radius: 0px 12px 0px 0px;
+    padding: 6px 18px 0 0;
+    border-radius: 0 12px 0 0;
     background: $color-light;
     margin: 0;
     color: $color-bright;
     font-family: $font-regular;
-    font-size: 24px;
+    font-size: 23px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
     position: relative;
-    max-width: 80%;
+    max-width: 89%;
+    letter-spacing: -0.7px;
 
     @include vp-1200 {
       font-size: 20px;
-      padding: 10px 18px 6px 0px;
+      padding: 4px 18px 2px 0;
       line-height: 24px;
-      max-width: 70%;
+      max-width: 86%;
     }
 
     @include vp-767 {
       font-size: 16px;
-      padding: 10px 18px 4px 0px;
-      line-height: 18px;
+      max-width: 76%;
+      padding: 9px 10px 0 0;
+      line-height: 20px;
+      letter-spacing: -0.5px;
     }
 
     &::before {
@@ -270,12 +312,13 @@
   }
 }
 
-.description-wrapper {
+.news__description-wrapper {
   display: flex;
-  padding: 12px 18px 15px 0px;
+  padding: 8px 18px 12px 0px;
   border-radius: 0px 12px;
   background: $color-light;
   position: relative;
+  align-items: center;
 
   @include vp-767 {
     padding: 12px 10px 10px 0px;
@@ -293,29 +336,87 @@
     padding: 0;
     color: $color-dark;
     font-family: $font-regular;
-    font-size: 14px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
 
     @include vp-1200 {
-      line-height: 20px;
+      line-height: 19px;
+      letter-spacing: 0.1px;
     }
 
     @include vp-767 {
       font-size: 12px;
       line-height: 14px;
+      letter-spacing: -0.4px;
+    }
+  }
+
+  br {
+    @include vp-767 {
+      display: none;
     }
   }
 }
 
 .news__link-icon {
   margin-left: 16px;
+  margin-top: 3px;
   flex-shrink: 0;
   width: 30px;
   height: 30px;
 
+  @include vp-1200 {
+    margin-left: 16px;
+  }
+
   @include vp-767 {
     margin-left: 10px;
+  }
+}
+
+.news__item {
+  &:first-child {
+    width: 604px;
+    padding: 46px 215px 0 0;
+
+    & h3 {
+      padding: 11px 18px 0 0;
+      max-width: 292px;
+      line-height: 28px;
+      letter-spacing: -0.3px;
+    }
+
+    & span {
+      padding: 8px 10px 6px 0;
+    }
+
+    @include vp-1200 {
+      max-width: none;
+      padding: 26px 84px 0 0;
+      width: auto;
+
+      & h3 {
+        padding: 4px 18px 2px 0;
+        line-height: 24px;
+        max-width: 86%;
+      }
+
+      & span {
+        padding: 9px 12px 6px 0;
+      }
+    }
+
+    @include vp-767 {
+      padding: 26px 27px 0 0;
+
+      & h3 {
+        max-width: 76%;
+        padding: 9px 10px 0 0;
+        line-height: 20px;
+        letter-spacing: -0.5px;
+      }
+    }
   }
 }

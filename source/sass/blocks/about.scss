@@ -1,12 +1,12 @@
 .about__container {
-  padding-top: 131px;
+  padding-top: 120px;
 
   @include vp-1200 {
-    padding-top: 100px;
+    padding-top: 106px;
   }
 
   @include vp-767 {
-    padding-top: 72px;
+    padding-top: 68px;
   }
 }
 
@@ -18,6 +18,7 @@
   @include vp-1200 {
     padding-right: 185px;
     flex-direction: column;
+    margin-bottom: 40px;
   }
 
   @include vp-767 {
@@ -25,11 +26,25 @@
   }
 }
 
-.about__title {
-  margin-bottom: 43px;
+.about__left-description-wrapper {
+  min-width: 477px;
+  max-width: 477px;
 
   @include vp-767 {
-    margin-bottom: 21px;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.about__title {
+  margin-bottom: 25px;
+
+  @include vp-1200 {
+    margin-bottom: 29px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 11px;
   }
 
   & ~ p {
@@ -37,7 +52,7 @@
     margin: 0;
     color: $color-dark;
     font-family: $font-regular;
-    font-size: 22px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
@@ -46,13 +61,16 @@
     @include vp-1200 {
       font-size: 20px;
       line-height: 26px;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+      letter-spacing: -0.6px;
     }
 
     @include vp-767 {
       font-size: 16px;
       line-height: 22px;
-      margin-bottom: 40px;
+      margin-bottom: 33px;
+      max-width: 100%;
+      letter-spacing: -0.3px;
     }
   }
 }
@@ -67,21 +85,21 @@
   h3 {
     padding: 0;
     margin: 0;
-    margin-bottom: 46px;
+    margin-bottom: 35px;
     color: $color-bright;
     font-family: $font-regular;
-    font-size: 32px;
+    font-size: 31px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
 
     @include vp-1200 {
-      margin-bottom: 30px;
+      margin-bottom: 23px;
       font-size: 28px;
     }
 
     @include vp-767 {
-      margin-bottom: 20px;
+      margin-bottom: 12px;
       font-size: 18px;
     }
   }
@@ -89,10 +107,10 @@
   p {
     padding: 0;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
     color: $color-dark;
     font-family: $font-regular;
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
@@ -103,13 +121,14 @@
 
     @include vp-767 {
       font-size: 14px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+      letter-spacing: -0.4px;
     }
   }
 }
 
 .about__list {
-  padding: 70px 106px;
+  padding: 70px 106px 56px;
   margin: 0;
   list-style-type: none;
   border-radius: 20px;
@@ -119,7 +138,8 @@
   gap: 32px;
 
   @include vp-1200 {
-    gap: 30px 20px;
+    gap: 20px 30px;
+    padding: 40px;
   }
 
   @include vp-767 {
@@ -135,7 +155,7 @@
 }
 
 .about__item-wrapper {
-  padding: 30px 60px;
+  padding: 30px 40px 28px 60px;
   border-radius: 16px;
   border: 1px solid $color-light;
   display: flex;
@@ -144,11 +164,12 @@
 
   @include vp-1200 {
     padding: 30px;
+    padding-bottom: 24px;
     flex-direction: column;
   }
 
   @include vp-767 {
-    padding: 24px 20px;
+    padding: 19px 20px 23px;
   }
 
   h4 {
@@ -157,7 +178,7 @@
     margin-right: 20px;
     color: $color-default-white;
     font-family: $font-regular;
-    font-size: 26px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
@@ -166,17 +187,23 @@
 
     @include vp-1200 {
       margin-right: 0;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       font-size: 20px;
       line-height: 22px;
-      letter-spacing: 0.2px;
+      letter-spacing: -0.8px;
     }
 
     @include vp-767 {
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       font-size: 16px;
       line-height: 20px;
-      letter-spacing: 0.16px;
+      letter-spacing: -0.6px;
+    }
+  }
+
+  br {
+    @include vp-767 {
+      display: none;
     }
   }
 
@@ -185,13 +212,15 @@
     margin: 0;
     color: $color-light;
     font-family: $font-regular;
-    font-size: 16px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 300;
     line-height: 20px;
+    max-width: 194px;
 
     @include vp-767 {
-      font-size: 14px;
+      font-size: 13px;
+      max-width: 175px;
     }
   }
 
@@ -208,5 +237,9 @@
     background-image: url("../img/svg/star.svg");
     background-size: 18px 22px;
     background-position: center;
+
+    @include vp-767 {
+      background-size: 18px 18px;
+    }
   }
 }

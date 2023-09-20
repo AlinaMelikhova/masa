@@ -1,7 +1,16 @@
-.swiper-reviews,
-.swiper-programs {
+.swiper-reviews {
   @include vp-1200 {
     padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.swiper-programs {
+  @include vp-1200 {
+    padding: 6px 45px 0;
   }
 
   @include vp-767 {
@@ -26,8 +35,7 @@
   background-color: rgba(49, 109, 194, 0.2);
 
   @include vp-1200 {
-    width: 75%;
-    left: 45px;
+    width: 83%;
   }
 
   @include vp-767 {
@@ -39,7 +47,7 @@
 .swiper-button-prev {
   position: absolute;
   top: auto;
-  bottom: 0;
+  bottom: 5px;
   width: 22px;
   height: 22px;
   background-color: $color-transparent;
@@ -49,6 +57,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include vp-1200 {
+    bottom: 0;
+  }
 
   &--programs {
     @include vp-767 {
@@ -93,13 +105,24 @@
   &--news {
     left: 0;
 
-    // @include vp-1200 {
-    //   right: 77px;
-    // }
+    @include vp-1200 {
+      bottom: 5px;
+    }
+  }
 
-    // @include vp-767 {
-    //   right: 45px;
-    // }
+  &--reviews {
+    right: 132px;
+    bottom: 0;
+
+    @include vp-1200 {
+      right: 78px;
+    }
+
+    @include vp-767 {
+      right: 46px;
+      bottom: auto;
+      top: 22px;
+    }
   }
 }
 
@@ -121,13 +144,25 @@
     right: 0;
     transform: rotate(180deg);
 
-    // @include vp-1200 {
-    //   right: 77px;
-    // }
+    @include vp-1200 {
+      bottom: 5px;
+    }
+  }
 
-    // @include vp-767 {
-    //   right: 45px;
-    // }
+  &--reviews {
+    right: 100px;
+    transform: rotate(180deg);
+    bottom: 0;
+
+    @include vp-1200 {
+      right: 45px;
+    }
+
+    @include vp-767 {
+      right: 15px;
+      bottom: auto;
+      top: 22px;
+    }
   }
 }
 
@@ -135,7 +170,12 @@
   &--hero {
     background-color: $color-default-white;
     border-radius: 20px 20px 0px 0px;
-    padding: 10px 20px;
+    padding: 11px 20px;
+
+    @include vp-767 {
+      padding: 5px 16px 7px;
+      border-radius: 12px 12px 0px 0px;
+    }
 
     &::before {
       @include angle;
@@ -151,6 +191,19 @@
 }
 
 .pagination-bullet {
+  &--hero {
+    margin-right: 12px;
+
+    @include vp-767 {
+      width: 8px;
+      height: 8px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &--news {
     background-color: $color-transparent;
     border: none;
@@ -169,6 +222,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
+    @include vp-767 {
+      width: 26px;
+      height: 26px;
+      font-size: 13px;
+      margin-right: 16px;
+    }
 
     &:last-child {
       margin-right: 0;

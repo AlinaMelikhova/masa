@@ -1,8 +1,8 @@
 .footer__container {
-  padding: 60px 0 50px;
+  padding-bottom: 50px;
 
   @include vp-767 {
-    padding: 29px 0 40px;
+    padding: 0 0 40px;
   }
 }
 
@@ -16,6 +16,7 @@
   margin-bottom: 25px;
 
   @include vp-1200 {
+    margin-bottom: 23px;
     justify-content: space-between;
   }
 
@@ -31,7 +32,7 @@
 
   @include vp-767 {
     margin-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
   }
 
   &:hover,
@@ -50,13 +51,14 @@
   max-width: 70%;
 
   @include vp-1200 {
-    max-width: 75%;
+    max-width: 80%;
     margin-right: 0;
     margin-left: auto;
   }
 
   @include vp-767 {
     max-width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -83,7 +85,7 @@
   @include vp-767 {
     margin-right: 0;
     padding: 0 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &:last-child {
@@ -95,10 +97,11 @@
   color: $color-dark;
   text-align: center;
   font-family: $font-regular;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  letter-spacing: 0.1px;
 
   @include vp-767 {
     font-size: 13px;
@@ -157,6 +160,8 @@
     line-height: 18px;
     position: relative;
     margin-left: auto;
+    letter-spacing: -0.4px;
+    margin-top: -2px;
 
     @include vp-1200 {
       margin-bottom: 10px;
@@ -167,6 +172,7 @@
 
     @include vp-767 {
       align-self: center;
+      margin-bottom: 13px;
     }
 
     &:before {
@@ -174,7 +180,7 @@
       position: absolute;
       width: 100%;
       height: 1px;
-      bottom: 0;
+      bottom: -1px;
       left: 0;
       background-color: $color-dark;
     }
@@ -208,6 +214,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
+    letter-spacing: -0.5px;
 
     @include vp-1200 {
       position: static;
@@ -232,7 +239,7 @@
   flex-wrap: wrap;
   position: absolute;
   right: 0;
-  top: -69px;
+  top: -72px;
 
   @include vp-1200 {
     position: static;
@@ -264,6 +271,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include vp-767 {
+    width: 26px;
+    height: 26px;
+  }
 
   svg {
     fill: $color-default-white;
