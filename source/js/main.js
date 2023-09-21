@@ -1,21 +1,21 @@
-import { iosVhFix } from "./utils/ios-vh-fix";
-import { initModals } from "./modules/modals/init-modals";
-import { Form } from "./modules/form-validate/form";
-import { handleMobileMenu } from "./modules/mobile-menu";
-import { initSwipers } from "./modules/my-swipers";
-import { initAccordions } from "./vendor/init-accordion";
-import { initTabs } from "./vendor/init-tabs";
-import "./modules/leaflet";
-import "./modules/form-select";
-import "./modules/modals/modal-form-select";
+import {iosVhFix} from './utils/ios-vh-fix';
+import {initModals} from './modules/modals/init-modals';
+import {Form} from './modules/form-validate/form';
+import {handleMobileMenu} from './modules/mobile-menu';
+import {initSwipers} from './modules/my-swipers';
+import {initAccordions} from './vendor/init-accordion';
+import {initTabs} from './vendor/init-tabs';
+import {initFormSelects} from './modules/form-select';
+import './modules/leaflet';
 
 // ---------------------------------
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('DOMContentLoaded', () => {
   // Utils
   iosVhFix();
   initTabs();
   initAccordions();
+  initFormSelects();
 
   // Modules
   handleMobileMenu();
@@ -24,7 +24,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener("load", () => {
+  window.addEventListener('load', () => {
     initModals();
     const form = new Form();
     window.form = form;

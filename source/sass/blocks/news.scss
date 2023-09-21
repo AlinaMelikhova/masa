@@ -22,7 +22,6 @@
 }
 
 .news__tabs-list {
-  padding: 0;
   margin: 0;
   list-style-type: none;
   padding: 42px 0 40px;
@@ -145,25 +144,6 @@
     min-height: 240px;
   }
 
-  &:first-child {
-    width: 604px;
-    padding: 46px 215px 0 0;
-
-    & h3 {
-      max-width: 292px;
-      line-height: 22px;
-      letter-spacing: -0.3px;
-    }
-
-    & span {
-      padding: 8px 10px 6px 0;
-    }
-
-    @include vp-1200 {
-      max-width: none;
-    }
-  }
-
   &:last-child {
     margin: 0;
   }
@@ -239,8 +219,8 @@
   justify-content: flex-start;
 
   span {
-    padding: 8px 12px 6px 0px;
-    border-radius: 0px 12px 0px 0px;
+    padding: 8px 12px 6px 0;
+    border-radius: 0 12px 0 0;
     background: $color-light;
     color: $color-bright;
     font-family: $font-regular;
@@ -322,14 +302,14 @@
 
 .news__description-wrapper {
   display: flex;
-  padding: 8px 18px 12px 0px;
-  border-radius: 0px 12px;
+  padding: 8px 18px 12px 0;
+  border-radius: 0 12px;
   background: $color-light;
   position: relative;
   align-items: center;
 
   @include vp-767 {
-    padding: 12px 10px 10px 0px;
+    padding: 12px 10px 10px 0;
   }
 
   &::before {
@@ -384,47 +364,45 @@
   }
 }
 
-.news__item {
-  &:first-child {
-    width: 604px;
-    padding: 46px 215px 0 0;
+.news__item:first-child {
+  width: 604px;
+  padding: 46px 215px 0 0;
+
+  & h3 {
+    padding: 11px 18px 0 0;
+    max-width: 292px;
+    line-height: 28px;
+    letter-spacing: -0.3px;
+  }
+
+  & span {
+    padding: 8px 10px 6px 0;
+  }
+
+  @include vp-1200 {
+    max-width: none;
+    padding: 26px 84px 0 0;
+    width: auto;
 
     & h3 {
-      padding: 11px 18px 0 0;
-      max-width: 292px;
-      line-height: 28px;
-      letter-spacing: -0.3px;
+      padding: 4px 18px 2px 0;
+      line-height: 24px;
+      max-width: 86%;
     }
 
     & span {
-      padding: 8px 10px 6px 0;
+      padding: 9px 12px 6px 0;
     }
+  }
 
-    @include vp-1200 {
-      max-width: none;
-      padding: 26px 84px 0 0;
-      width: auto;
+  @include vp-767 {
+    padding: 26px 27px 0 0;
 
-      & h3 {
-        padding: 4px 18px 2px 0;
-        line-height: 24px;
-        max-width: 86%;
-      }
-
-      & span {
-        padding: 9px 12px 6px 0;
-      }
-    }
-
-    @include vp-767 {
-      padding: 26px 27px 0 0;
-
-      & h3 {
-        max-width: 76%;
-        padding: 9px 10px 0 0;
-        line-height: 20px;
-        letter-spacing: -0.5px;
-      }
+    & h3 {
+      max-width: 76%;
+      padding: 9px 10px 0 0;
+      line-height: 20px;
+      letter-spacing: -0.5px;
     }
   }
 }

@@ -32,6 +32,12 @@
     position: relative;
     overflow-y: hidden;
   }
+
+  &--menu-opened .header__logo {
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .section-title {

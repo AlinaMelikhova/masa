@@ -1,22 +1,23 @@
-import Swiper from "../vendor/swiper.js";
+import Swiper from '../vendor/swiper.js';
 
 const initHeroSwiper = () => {
   // eslint-disable-next-line no-new
-  new Swiper(".swiper-hero", {
-    direction: "horizontal",
+  new Swiper('.swiper-hero', {
+    direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
     speed: 300,
-    // autoplay: {
-    //   delay: 3000,
-    // },
+
+    autoplay: {
+      delay: 3000,
+    },
 
     pagination: {
-      el: ".swiper-pagination--hero",
+      el: '.swiper-pagination--hero',
       clickable: true,
       renderBullet(index, className) {
         return (
-          '<span class="' + className + ' pagination-bullet--hero">' + "</span>"
+          '<span class="' + className + ' pagination-bullet--hero">' + '</span>'
         );
       },
     },
@@ -29,46 +30,23 @@ const initHeroSwiper = () => {
   });
 };
 
-// const initTabsListSwiper = () => {
-//   // eslint-disable-next-line no-new
-//   new Swiper(".swiper-tabs-list", {
-//     direction: "horizontal",
-//     loop: false,
-//     slidesPerView: "auto",
-//     spaceBetween: 12,
-//     speed: 300,
-
-//     breakpoints: {
-//       1200: {
-//         allowTouchMove: false,
-//         slidesPerView: 3,
-//         spaceBetween: 32,
-//       },
-//       768: {
-//         slidesPerView: "auto",
-//         spaceBetween: 10,
-//       },
-//     },
-//   });
-// };
-
 const initNewsSwiper = () => {
   // eslint-disable-next-line no-new
-  new Swiper(".swiper-news", {
+  new Swiper('.swiper-news', {
     loop: false,
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
-    slideVisibleClass: "news__item--visible",
+    slideVisibleClass: 'news__item--visible',
     speed: 300,
     slidesPerView: 1,
     spaceBetween: 20,
     grid: {
       rows: 2,
-      fill: "column",
+      fill: 'column',
     },
 
     pagination: {
-      el: ".swiper-pagination--news",
+      el: '.swiper-pagination--news',
       clickable: true,
       renderBullet(index, className) {
         return (
@@ -76,24 +54,24 @@ const initNewsSwiper = () => {
           className +
           ' pagination-bullet--news">' +
           (index + 1) +
-          "</span>"
+          '</span>'
         );
       },
     },
 
     navigation: {
-      nextEl: ".swiper-button-next--news",
-      prevEl: ".swiper-button-prev--news",
+      nextEl: '.swiper-button-next--news',
+      prevEl: '.swiper-button-prev--news',
     },
 
     breakpoints: {
       1200: {
         allowTouchMove: false,
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         spaceBetween: 32,
         grid: {
           rows: 1,
-          fill: "row",
+          fill: 'row',
         },
       },
       768: {
@@ -101,7 +79,7 @@ const initNewsSwiper = () => {
         spaceBetween: 30,
         grid: {
           rows: 2,
-          fill: "column",
+          fill: 'column',
         },
       },
     },
@@ -110,20 +88,20 @@ const initNewsSwiper = () => {
 
 const initProgramsSwiper = () => {
   // eslint-disable-next-line no-new
-  new Swiper(".swiper-programs", {
-    direction: "horizontal",
+  new Swiper('.swiper-programs', {
+    direction: 'horizontal',
     loop: false,
     slidesPerView: 1,
     spaceBetween: 15,
     speed: 300,
 
     scrollbar: {
-      el: ".swiper-scrollbar--programs",
+      el: '.swiper-scrollbar--programs',
     },
 
     navigation: {
-      nextEl: ".swiper-button-next--programs",
-      prevEl: ".swiper-button-prev--programs",
+      nextEl: '.swiper-button-next--programs',
+      prevEl: '.swiper-button-prev--programs',
     },
 
     breakpoints: {
@@ -133,7 +111,7 @@ const initProgramsSwiper = () => {
         spaceBetween: 32,
       },
       768: {
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         spaceBetween: 30,
       },
     },
@@ -142,20 +120,20 @@ const initProgramsSwiper = () => {
 
 const initReviewSwiper = () => {
   // eslint-disable-next-line no-new
-  new Swiper(".swiper-reviews", {
-    direction: "horizontal",
+  new Swiper('.swiper-reviews', {
+    direction: 'horizontal',
     loop: false,
     slidesPerView: 1,
     spaceBetween: 15,
     speed: 300,
 
     scrollbar: {
-      el: ".swiper-scrollbar--reviews",
+      el: '.swiper-scrollbar--reviews',
     },
 
     navigation: {
-      nextEl: ".swiper-button-next--reviews",
-      prevEl: ".swiper-button-prev--reviews",
+      nextEl: '.swiper-button-next--reviews',
+      prevEl: '.swiper-button-prev--reviews',
     },
 
     breakpoints: {
@@ -165,7 +143,7 @@ const initReviewSwiper = () => {
         spaceBetween: 32,
       },
       768: {
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         spaceBetween: 30,
       },
     },

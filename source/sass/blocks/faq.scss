@@ -46,25 +46,12 @@
 .faq__item {
   box-sizing: border-box;
   margin-bottom: 10px;
-  padding: 39px 40px;
   border-radius: 16px;
   border: 1px solid $color-bright;
   transition: background-color 0.3s;
 
-  @include vp-1200 {
-    padding: 30px 30px 28px;
-  }
-
-  @include vp-767 {
-    padding: 18px 15px 20px;
-  }
-
   &:last-child {
     margin: 0;
-  }
-
-  &.is-active {
-    background-color: $color-bright;
   }
 
   h3 {
@@ -77,8 +64,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 40px;
-    transition: color 0.6s;
-    transition: margin-bottom 0.6s;
+    transition: 0.6s;
     letter-spacing: -0.4px;
 
     @include vp-1200 {
@@ -93,54 +79,6 @@
       font-size: 15px;
       line-height: 17px;
       letter-spacing: 0.1px;
-    }
-  }
-
-  &.is-active h3 {
-    color: $color-default-white;
-    margin-bottom: 14px;
-
-    @include vp-1200 {
-      margin-bottom: 21px;
-    }
-
-    @include vp-767 {
-      margin-bottom: 0;
-    }
-  }
-
-  &.is-active button {
-    background-color: $color-default-white;
-
-    &::after {
-      width: 0;
-      height: 0;
-    }
-
-    &::before {
-      background-color: $color-bright;
-    }
-
-    &:not(:disabled):hover,
-    &:not(:disabled):focus-visible {
-      outline: none;
-      background-color: $color-transparent;
-      box-shadow: inset 0 0 0 1px $color-default-white;
-
-      &::before,
-      &::after {
-        background-color: $color-default-white;
-      }
-    }
-
-    &:not(:disabled):active {
-      background-color: $color-default-white;
-      box-shadow: none;
-
-      &::before,
-      &::after {
-        background-color: $color-dark-bright;
-      }
     }
   }
 
@@ -169,17 +107,85 @@
       letter-spacing: -0.5px;
     }
   }
+}
 
-  &.is-active p {
-    margin-bottom: -8px;
+.faq__item-wrapper {
+  padding: 39px 40px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  @include vp-1200 {
+    padding: 30px 30px 28px;
+  }
+
+  @include vp-767 {
+    padding: 18px 15px 20px;
+  }
+
+  &--big {
+    padding: 39px 40px 32px;
 
     @include vp-1200 {
-      margin-bottom: -3px;
+      padding: 29px 29px 25px;
     }
 
     @include vp-767 {
-      margin-bottom: -6px;
-      margin-top: 16px;
+      padding: 23px 14px 19px;
+    }
+
+    h3 {
+      line-height: 33px;
+      margin-top: -5px;
+
+      @include vp-1200 {
+        line-height: 25px;
+        margin-top: -10px;
+      }
+
+      @include vp-767 {
+        line-height: 18px;
+      }
+    }
+
+    br {
+      display: none;
+
+      @include vp-767 {
+        display: inline;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:focus-within {
+    background-color: $color-default-white;
+  }
+
+  &:hover .faq__button:not(:disabled),
+  &:focus-visible .faq__button:not(:disabled) {
+    outline: none;
+    background-color: $color-transparent;
+    box-shadow: inset 0 0 0 1px $color-bright;
+
+    &::before,
+    &::after {
+      background-color: $color-bright;
+    }
+  }
+
+  &:active h3 {
+    color: $color-dark-bright;
+  }
+
+  &:active .faq__button:not(:disabled) {
+    background-color: $color-dark-bright;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
     }
   }
 }
@@ -223,28 +229,6 @@
     top: calc(50% - 0.5px);
   }
 
-  &:not(:disabled):hover,
-  &:not(:disabled):focus-visible {
-    outline: none;
-    background-color: $color-transparent;
-    box-shadow: inset 0 0 0 1px $color-bright;
-
-    &::before,
-    &::after {
-      background-color: $color-bright;
-    }
-  }
-
-  &:not(:disabled):active {
-    background-color: $color-dark-bright;
-    box-shadow: none;
-
-    &::before,
-    &::after {
-      background-color: $color-default-white;
-    }
-  }
-
   &:disabled {
     background-color: $color-disabled;
     box-shadow: none;
@@ -255,5 +239,83 @@
       background-color: $color-default-white;
       opacity: 0.6;
     }
+  }
+}
+
+.faq__item.is-active {
+  background-color: $color-bright;
+}
+
+.faq__item.is-active > .faq__item-wrapper:hover,
+.faq__item.is-active > .faq__item-wrapper:focus-visible {
+  background-color: $color-bright;
+}
+
+.faq__item.is-active > .faq__item-wrapper:hover button:not(:disabled),
+.faq__item.is-active > .faq__item-wrapper:focus-visible button:not(:disabled) {
+  outline: none;
+  background-color: $color-transparent;
+  box-shadow: inset 0 0 0 1px $color-default-white;
+
+  &::before,
+  &::after {
+    background-color: $color-default-white;
+  }
+}
+
+.faq__item.is-active > .faq__item-wrapper:active {
+  background-color: $color-dark-bright;
+
+  h3 {
+    color: $color-default-white;
+  }
+}
+
+.faq__item.is-active > .faq__item-wrapper:active button:not(:disabled) {
+  background-color: $color-default-white;
+  box-shadow: none;
+
+  &::before,
+  &::after {
+    background-color: $color-dark-bright;
+  }
+}
+
+.faq__item.is-active p {
+  margin-bottom: -8px;
+
+  @include vp-1200 {
+    margin-bottom: -3px;
+  }
+
+  @include vp-767 {
+    margin-bottom: -6px;
+    margin-top: 16px;
+  }
+}
+
+.faq__item.is-active h3 {
+  color: $color-default-white;
+  margin-bottom: 14px;
+
+  @include vp-1200 {
+    margin-bottom: 21px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 0;
+  }
+}
+
+.faq__item.is-active button {
+  background-color: $color-default-white;
+
+  &::after {
+    width: 0;
+    height: 0;
+  }
+
+  &::before {
+    background-color: $color-bright;
   }
 }

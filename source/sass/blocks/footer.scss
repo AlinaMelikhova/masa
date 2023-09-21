@@ -175,7 +175,7 @@
       margin-bottom: 13px;
     }
 
-    &:before {
+    &::before {
       content: "";
       position: absolute;
       width: 100%;
@@ -190,7 +190,7 @@
       outline: none;
       color: $color-bright;
 
-      &:before {
+      &::before {
         background-color: $color-bright;
       }
     }
@@ -198,7 +198,7 @@
     &:active {
       color: $color-dark-bright;
 
-      &:before {
+      &::before {
         background-color: $color-dark-bright;
       }
     }

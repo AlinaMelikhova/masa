@@ -77,7 +77,7 @@
   }
 
   input {
-    box-shadow: inset 0 0 0 1px $color-bright;
+    border: solid 1px $color-bright;
     cursor: pointer;
 
     &:checked {
@@ -91,7 +91,7 @@
     &:checked:not(:disabled):hover,
     &:checked:not(:disabled):focus-visible {
       background: $color-transparent;
-      box-shadow: inset 0 0 0 1px $color-bright;
+      border: solid 1px $color-bright;
 
       &::before {
         background-image: url("../img/svg/checkbox.svg");
@@ -100,11 +100,11 @@
 
     &:not(:disabled):hover,
     &:not(:disabled):focus-visible {
-      box-shadow: inset 0 0 0 1px $color-dark-bright;
+      border: solid 1px $color-dark-bright;
     }
 
     &:disabled {
-      box-shadow: inset 0 0 0 1px $color-disabled;
+      border: solid 1px $color-disabled;
       background-color: $color-default-white;
       opacity: 0.6;
     }
