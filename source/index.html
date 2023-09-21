@@ -317,7 +317,7 @@
                   </p>
                   <button class="about__button primary-button">
                     <span>подробнее о проекте</span>
-                    <span class="hero__link-icon arrow-button"></span>
+                    <span class="about__link-icon arrow-button"></span>
                   </button>
                 </div>
               </div>
@@ -1725,7 +1725,7 @@
                               placeholder=""
                               required
                             />
-                            <p>Имя</p>
+                            <i>Имя</i>
                             <span></span>
                           </label>
                           <label
@@ -1741,7 +1741,7 @@
                               placeholder=""
                               required
                             />
-                            <p>Телефон</p>
+                            <i>Телефон</i>
                             <span></span>
                           </label>
                         </div>
@@ -1758,7 +1758,7 @@
                               rows="4"
                               required
                             ></textarea>
-                            <p>Ваше сообщение</p>
+                            <i>Ваше сообщение</i>
                             <span></span>
                           </label>
                         </div>
@@ -1766,7 +1766,6 @@
                         <div class="form__select custom-select">
                           <button
                             role="combobox"
-                            aria-labelledby="select button"
                             aria-haspopup="listbox"
                             aria-expanded="false"
                             aria-controls="select-dropdown"
@@ -1817,9 +1816,9 @@
                               id="checkbox-policy"
                               required
                             />
-                            <p>
+                            <i>
                               Я согласен на обработку моих персональных данных
-                            </p>
+                            </i>
                           </label>
                         </div>
 
@@ -2013,7 +2012,7 @@
                       placeholder=""
                       required
                     />
-                    <p>Имя</p>
+                    <i>Имя</i>
                     <span></span>
                   </label>
                   <label
@@ -2029,7 +2028,7 @@
                       placeholder=""
                       required
                     />
-                    <p>Телефон</p>
+                    <i>Телефон</i>
                     <span></span>
                   </label>
                 </div>
@@ -2039,7 +2038,6 @@
                 >
                   <button
                     role="combobox"
-                    aria-labelledby="select button"
                     aria-haspopup="listbox"
                     aria-expanded="false"
                     aria-controls="select-dropdown"
@@ -2056,7 +2054,7 @@
                       <use href="./img/sprite.svg#select-arrow" />
                     </svg>
                   </button>
-                  <ul role="listbox" id="select-dropdown">
+                  <ul role="listbox" id="select-dropdown-modal">
                     <li role="option">
                       <input type="radio" id="spb-modal" name="city" />
                       <label for="spb-modal">Санкт-Петербург</label>
@@ -2092,7 +2090,7 @@
                       id="checkbox-policy-modal"
                       required
                     />
-                    <p>Я согласен на обработку моих персональных данных</p>
+                    <i>Я согласен на обработку моих персональных данных</i>
                   </label>
                 </div>
 

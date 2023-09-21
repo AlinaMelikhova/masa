@@ -106,7 +106,7 @@
     flex-direction: column-reverse;
   }
 
-  p {
+  i {
     margin: 0;
     margin-bottom: 7px;
     padding: 0;
@@ -170,13 +170,13 @@
       background: rgba(255, 255, 255, 0.2);
     }
 
-    &:not(:disabled):hover ~ p,
-    &:not(:disabled):focus-visible ~ p,
-    &:not(:disabled):active ~ p {
+    &:not(:disabled):hover ~ i,
+    &:not(:disabled):focus-visible ~ i,
+    &:not(:disabled):active ~ i {
       opacity: 1;
     }
 
-    &:disabled ~ p {
+    &:disabled ~ i {
       opacity: 0.6;
     }
   }
@@ -223,13 +223,13 @@
       background: rgba(255, 255, 255, 0.2);
     }
 
-    &:not(:disabled):hover ~ p,
-    &:not(:disabled):focus-visible ~ p,
-    &:not(:disabled):active ~ p {
+    &:not(:disabled):hover ~ i,
+    &:not(:disabled):focus-visible ~ i,
+    &:not(:disabled):active ~ i {
       opacity: 1;
     }
 
-    &:disabled ~ p {
+    &:disabled ~ i {
       opacity: 0.6;
     }
   }
@@ -308,7 +308,7 @@
     }
   }
 
-  p {
+  i {
     padding: 0;
     margin: 0;
     color: $color-default-white;

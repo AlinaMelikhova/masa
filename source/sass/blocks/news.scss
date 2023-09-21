@@ -73,6 +73,8 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  background-color: $color-transparent;
+  opacity: 0.6;
 
   @include vp-1200 {
     padding: 12px 19px;
@@ -87,6 +89,12 @@
   &.is-active {
     border-radius: 20px;
     box-shadow: 0 0 0 1px $color-bright;
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 1;
   }
 }
 

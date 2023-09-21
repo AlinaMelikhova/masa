@@ -239,5 +239,20 @@
       color: $color-default-white;
       opacity: 1;
     }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-transparent;
+      box-shadow: inset 0 0 0 1px $color-bright;
+      outline: none;
+      opacity: 1;
+      color: $color-bright;
+    }
+
+    &:active {
+      background-color: $color-dark-bright;
+      color: $color-default-white;
+      opacity: 1;
+    }
   }
 }
