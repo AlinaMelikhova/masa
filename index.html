@@ -209,11 +209,7 @@
                           организациях.
                         </p>
                         <div class="hero__button-wrapper">
-                          <a
-                            class="primary-button"
-                            href="#"
-                            data-open-modal="feedback"
-                          >
+                          <a class="primary-button" href="#">
                             <span>подробнее</span>
                             <span class="hero__link-icon arrow-button"></span>
                           </a>
@@ -242,11 +238,7 @@
                           хозяйства, устойчивого образа жизни и&nbsp;другое.
                         </p>
                         <div class="hero__button-wrapper">
-                          <a
-                            class="primary-button"
-                            href="#"
-                            data-open-modal="feedback"
-                          >
+                          <a class="primary-button" href="#">
                             <span>подробнее</span>
                             <span class="hero__link-icon arrow-button"></span>
                           </a>
@@ -276,11 +268,7 @@
                           израильский стиль жизни!
                         </p>
                         <div class="hero__button-wrapper">
-                          <a
-                            class="primary-button"
-                            href="#"
-                            data-open-modal="feedback"
-                          >
+                          <a class="primary-button" href="#">
                             <span>подробнее</span>
                             <span class="hero__link-icon arrow-button"></span>
                           </a>
@@ -315,7 +303,10 @@
                     центра&nbsp;&mdash; наделить этих людей способностью
                     инициировать значимые изменения.
                   </p>
-                  <button class="about__button primary-button">
+                  <button
+                    class="about__button primary-button"
+                    data-open-modal="feedback"
+                  >
                     <span>подробнее о проекте</span>
                     <span class="about__link-icon arrow-button"></span>
                   </button>
@@ -370,7 +361,9 @@
                   <h2 class="section-title">Программы</h2>
                   <a class="programs__button primary-button" href="#">
                     <span>все программы</span>
-                    <span class="programs__link-icon arrow-button"></span>
+                    <span
+                      class="programs__link-icon-button arrow-button"
+                    ></span>
                   </a>
                 </div>
                 <ul class="programs__list swiper-wrapper">
@@ -446,7 +439,6 @@
               </div>
               <button class="swiper-button-prev swiper-button-prev--programs">
                 <svg
-                  class="swiper-button__icon"
                   role="img"
                   aria-label="arrow-back."
                   width="10"
@@ -459,7 +451,6 @@
               </button>
               <button class="swiper-button-next swiper-button-next--programs">
                 <svg
-                  class="swiper-button__icon"
                   role="img"
                   aria-label="arrow-next."
                   width="10"
@@ -762,7 +753,6 @@
                     </ul>
                     <button class="swiper-button-prev swiper-button-prev--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-back."
                         width="10"
@@ -775,7 +765,6 @@
                     </button>
                     <button class="swiper-button-next swiper-button-next--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-next."
                         width="10"
@@ -856,7 +845,6 @@
                     </ul>
                     <button class="swiper-button-prev swiper-button-prev--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-back."
                         width="10"
@@ -869,7 +857,6 @@
                     </button>
                     <button class="swiper-button-next swiper-button-next--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-next."
                         width="10"
@@ -985,7 +972,6 @@
                     </ul>
                     <button class="swiper-button-prev swiper-button-prev--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-back."
                         width="10"
@@ -998,7 +984,6 @@
                     </button>
                     <button class="swiper-button-next swiper-button-next--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-next."
                         width="10"
@@ -1083,7 +1068,6 @@
                     </ul>
                     <button class="swiper-button-prev swiper-button-prev--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-back."
                         width="10"
@@ -1096,7 +1080,6 @@
                     </button>
                     <button class="swiper-button-next swiper-button-next--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-next."
                         width="10"
@@ -1195,7 +1178,6 @@
                     </ul>
                     <button class="swiper-button-prev swiper-button-prev--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-back."
                         width="10"
@@ -1208,7 +1190,6 @@
                     </button>
                     <button class="swiper-button-next swiper-button-next--news">
                       <svg
-                        class="swiper-button__icon"
                         role="img"
                         aria-label="arrow-next."
                         width="10"
@@ -1234,101 +1215,113 @@
               <h2 class="section-title">Вопросы и ответы</h2>
               <ul class="faq__list" data-accordion="parent">
                 <li class="faq__item" data-accordion="element">
-                  <div class="faq__title-container">
-                    <h3>Кто организатор? Какие сроки у&nbsp;программы?</h3>
-                    <button
-                      class="faq__button"
-                      title="показать больше"
-                      data-accordion="button"
-                      type="button"
-                    ></button>
+                  <div class="faq__item-wrapper" data-accordion="button">
+                    <div class="faq__title-container">
+                      <h3>Кто организатор? Какие сроки у&nbsp;программы?</h3>
+                      <button
+                        class="faq__button"
+                        title="показать больше"
+                        type="button"
+                      ></button>
+                    </div>
+                    <p data-accordion="content">
+                      Организатором программы является проект &laquo;Маса&raquo;
+                      в&nbsp;сотрудничестве с&nbsp;образовательными
+                      учреждениями. Сроки программы обмена могут варьироваться
+                      от&nbsp;одного семестра до&nbsp;года.
+                    </p>
                   </div>
-                  <p data-accordion="content">
-                    Организатором программы является проект &laquo;Маса&raquo;
-                    в&nbsp;сотрудничестве с&nbsp;образовательными учреждениями.
-                    Сроки программы обмена могут варьироваться от&nbsp;одного
-                    семестра до&nbsp;года.
-                  </p>
                 </li>
                 <li class="faq__item" data-accordion="element">
-                  <div class="faq__title-container">
-                    <h3>Что такое грант на&nbsp;обучение?</h3>
-                    <button
-                      class="faq__button"
-                      title="показать больше"
-                      data-accordion="button"
-                      type="button"
-                    ></button>
+                  <div class="faq__item-wrapper" data-accordion="button">
+                    <div class="faq__title-container">
+                      <h3>Что такое грант на&nbsp;обучение?</h3>
+                      <button
+                        class="faq__button"
+                        title="показать больше"
+                        type="button"
+                      ></button>
+                    </div>
+                    <p data-accordion="content">
+                      Грант на&nbsp;обучение&nbsp;&mdash; это финансовая
+                      поддержка, которую предоставляет организатор программы
+                      обмена студентами для оплаты учебных расходов.
+                    </p>
                   </div>
-                  <p data-accordion="content">
-                    Грант на&nbsp;обучение&nbsp;&mdash; это финансовая
-                    поддержка, которую предоставляет организатор программы
-                    обмена студентами для оплаты учебных расходов.
-                  </p>
                 </li>
                 <li class="faq__item" data-accordion="element">
-                  <div class="faq__title-container">
-                    <h3>Как определяется стоимость программы?</h3>
-                    <button
-                      class="faq__button"
-                      title="показать больше"
-                      data-accordion="button"
-                      type="button"
-                    ></button>
+                  <div class="faq__item-wrapper" data-accordion="button">
+                    <div class="faq__title-container">
+                      <h3>Как определяется стоимость программы?</h3>
+                      <button
+                        class="faq__button"
+                        title="показать больше"
+                        type="button"
+                      ></button>
+                    </div>
+                    <p data-accordion="content">
+                      Полная стоимость определяется организаторами
+                      в&nbsp;зависимости от&nbsp;направления. В&nbsp;большинстве
+                      случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную
+                      стоимость программы, и&nbsp;поэтому предусматривается
+                      определённая доля личного участия.
+                    </p>
                   </div>
-                  <p data-accordion="content">
-                    Полная стоимость определяется организаторами
-                    в&nbsp;зависимости от&nbsp;направления. В&nbsp;большинстве
-                    случаев грант &laquo;Маса&raquo; не&nbsp;покрывает полную
-                    стоимость программы, и&nbsp;поэтому предусматривается
-                    определённая доля личного участия.
-                  </p>
                 </li>
                 <li class="faq__item" data-accordion="element">
-                  <div class="faq__title-container">
-                    <h3>
-                      Признаётся&nbsp;ли учеба в&nbsp;рамках проекта для
-                      дальнейшего обучения?
-                    </h3>
-                    <button
-                      class="faq__button"
-                      title="показать больше"
-                      data-accordion="button"
-                      type="button"
-                    ></button>
+                  <div
+                    class="faq__item-wrapper faq__item-wrapper--big"
+                    data-accordion="button"
+                  >
+                    <div class="faq__title-container">
+                      <h3>
+                        Признаётся&nbsp;ли учеба в&nbsp;рамках проекта
+                        для&nbsp;<br />дальнейшего обучения?
+                      </h3>
+                      <button
+                        class="faq__button"
+                        title="показать больше"
+                        type="button"
+                      ></button>
+                    </div>
+                    <p data-accordion="content">
+                      Студенты, участвующие в&nbsp;проекте, могут использовать
+                      полученные знания и&nbsp;навыки в&nbsp;своей будущей
+                      профессиональной деятельности или продолжить обучение
+                      в&nbsp;высших учебных заведениях. Кроме того, многие
+                      университеты и&nbsp;колледжи предоставляют кредиты
+                      за&nbsp;участие в&nbsp;программе обмена студентами.
+                    </p>
                   </div>
-                  <p data-accordion="content">
-                    Студенты, участвующие в&nbsp;проекте, могут использовать
-                    полученные знания и&nbsp;навыки в&nbsp;своей будущей
-                    профессиональной деятельности или продолжить обучение
-                    в&nbsp;высших учебных заведениях. Кроме того, многие
-                    университеты и&nbsp;колледжи предоставляют кредиты
-                    за&nbsp;участие в&nbsp;программе обмена студентами.
-                  </p>
                 </li>
                 <li class="faq__item" data-accordion="element">
-                  <div class="faq__title-container">
-                    <h3>
-                      Как выглядит полный процесс регистрации на&nbsp;программу
-                      &laquo;Маса&raquo;?
-                    </h3>
-                    <button
-                      class="faq__button"
-                      title="показать больше"
-                      data-accordion="button"
-                      type="button"
-                    ></button>
+                  <div
+                    class="faq__item-wrapper faq__item-wrapper--big"
+                    data-accordion="button"
+                  >
+                    <div class="faq__title-container">
+                      <h3>
+                        Как выглядит полный процесс регистрации
+                        на&nbsp;программу &laquo;Маса&raquo;?
+                      </h3>
+                      <button
+                        class="faq__button"
+                        title="показать больше"
+                        type="button"
+                      ></button>
+                    </div>
+                    <p data-accordion="content">
+                      Процесс регистрации на&nbsp;программу обмена включает
+                      выбор университета-партнера и&nbsp;программы обмена,
+                      общение с&nbsp;координатором программы, заполнение
+                      заявления и&nbsp;предоставление необходимых документов,
+                      прохождение интервью, оформление визы, жилья
+                      и&nbsp;страховки, обучение по&nbsp;безопасности
+                      за&nbsp;границей и&nbsp;подписание договора
+                      об&nbsp;участии в&nbsp;программе. Подробнее можно узнать
+                      позвонив в&nbsp;центр.
+                    </p>
                   </div>
-                  <p data-accordion="content">
-                    Процесс регистрации на&nbsp;программу обмена включает выбор
-                    университета-партнера и&nbsp;программы обмена, общение
-                    с&nbsp;координатором программы, заполнение заявления
-                    и&nbsp;предоставление необходимых документов, прохождение
-                    интервью, оформление визы, жилья и&nbsp;страховки, обучение
-                    по&nbsp;безопасности за&nbsp;границей и&nbsp;подписание
-                    договора об&nbsp;участии в&nbsp;программе. Подробнее можно
-                    узнать позвонив в&nbsp;центр.
-                  </p>
                 </li>
               </ul>
             </div>
@@ -1627,7 +1620,6 @@
               </div>
               <button class="swiper-button-prev swiper-button-prev--reviews">
                 <svg
-                  class="swiper-button__icon"
                   role="img"
                   aria-label="arrow-back."
                   width="10"
@@ -1640,7 +1632,6 @@
               </button>
               <button class="swiper-button-next swiper-button-next--reviews">
                 <svg
-                  class="swiper-button__icon"
                   role="img"
                   aria-label="arrow-next."
                   width="10"
@@ -1763,9 +1754,23 @@
                           </label>
                         </div>
 
-                        <div class="form__select custom-select">
+                        <div
+                          class="form__select custom-select"
+                          data-validate-type="text"
+                          data-required
+                        >
+                          <label for="user-city">
+                            <i>Выберите город</i>
+                          </label>
+                          <input
+                            name="user-city"
+                            type="text"
+                            value=""
+                            required
+                          />
                           <button
-                            role="combobox"
+                            id="user-city"
+                            type="button"
                             aria-haspopup="listbox"
                             aria-expanded="false"
                             aria-controls="select-dropdown"
@@ -1800,14 +1805,13 @@
                               <label for="smolensk">Санкт-Петербург</label>
                             </li>
                           </ul>
-                          <p>Выберите город</p>
                         </div>
 
                         <div class="form__checkbox-wrapper">
                           <label
                             for="checkbox-policy"
                             data-matrix-limitation="letters-and-digit"
-                            data-validate-type="text"
+                            data-validate-type="checkbox"
                             data-required
                           >
                             <input
@@ -1827,7 +1831,7 @@
                           type="submit"
                         >
                           <span>отправить</span>
-                          <span class="hero__link-icon arrow-button"></span>
+                          <span class="form__link-icon arrow-button"></span>
                         </button>
                       </div>
                     </form>
@@ -1865,16 +1869,6 @@
             </div>
           </div>
         </section>
-
-        <!-- <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          </div>
-        </section> -->
       </main>
       <footer class="footer">
         <div class="footer__container container">
@@ -1972,7 +1966,7 @@
     </div>
 
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="form form-modal modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div
@@ -2035,9 +2029,16 @@
 
                 <div
                   class="form__select form-modal__select custom-select custom-select-modal"
+                  data-validate-type="text"
+                  data-required
                 >
+                  <label for="user-city-modal">
+                    <i>Выберите город</i>
+                  </label>
+                  <input name="user-city" type="text" value="" required />
                   <button
-                    role="combobox"
+                    id="user-city-modal"
+                    type="button"
                     aria-haspopup="listbox"
                     aria-expanded="false"
                     aria-controls="select-dropdown"
@@ -2072,7 +2073,6 @@
                       <label for="smolensk-modal">Санкт-Петербург</label>
                     </li>
                   </ul>
-                  <p>Выберите город</p>
                 </div>
 
                 <div
@@ -2081,7 +2081,7 @@
                   <label
                     for="checkbox-policy-modal"
                     data-matrix-limitation="letters-and-digit"
-                    data-validate-type="text"
+                    data-validate-type="checkbox"
                     data-required
                   >
                     <input
@@ -2096,7 +2096,7 @@
 
                 <button class="form-modal__button primary-button" type="submit">
                   <span>отправить</span>
-                  <span class="hero__link-icon arrow-button"></span>
+                  <span class="form__link-icon arrow-button"></span>
                 </button>
               </div>
             </form>
