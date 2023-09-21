@@ -2448,12 +2448,20 @@ button,
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0.6;
 }
 
 .news__tabs-button.is-active {
   border-radius: 20px;
   -webkit-box-shadow: 0 0 0 1px #316dc2;
   box-shadow: 0 0 0 1px #316dc2;
+  opacity: 1;
+}
+
+.news__tabs-button:hover,
+.news__tabs-button:focus-visible {
+  opacity: 1;
 }
 
 .news__list {
@@ -2966,7 +2974,7 @@ button,
   flex-direction: column-reverse;
 }
 
-.form__form-input-container p {
+.form__form-input-container i {
   margin: 0;
   margin-bottom: 7px;
   padding: 0;
@@ -3031,13 +3039,13 @@ button,
   background: rgba(255, 255, 255, 0.2);
 }
 
-.form__text-input-wrapper input:not(:disabled):hover ~ p,
-.form__text-input-wrapper input:not(:disabled):focus-visible ~ p,
-.form__text-input-wrapper input:not(:disabled):active ~ p {
+.form__text-input-wrapper input:not(:disabled):hover ~ i,
+.form__text-input-wrapper input:not(:disabled):focus-visible ~ i,
+.form__text-input-wrapper input:not(:disabled):active ~ i {
   opacity: 1;
 }
 
-.form__text-input-wrapper input:disabled ~ p {
+.form__text-input-wrapper input:disabled ~ i {
   opacity: 0.6;
 }
 
@@ -3083,13 +3091,13 @@ button,
   background: rgba(255, 255, 255, 0.2);
 }
 
-.form__message-wrapper textarea:not(:disabled):hover ~ p,
-.form__message-wrapper textarea:not(:disabled):focus-visible ~ p,
-.form__message-wrapper textarea:not(:disabled):active ~ p {
+.form__message-wrapper textarea:not(:disabled):hover ~ i,
+.form__message-wrapper textarea:not(:disabled):focus-visible ~ i,
+.form__message-wrapper textarea:not(:disabled):active ~ i {
   opacity: 1;
 }
 
-.form__message-wrapper textarea:disabled ~ p {
+.form__message-wrapper textarea:disabled ~ i {
   opacity: 0.6;
 }
 
@@ -3175,7 +3183,7 @@ button,
   background-image: url("../img/svg/checkbox-white.svg");
 }
 
-.form__checkbox-wrapper p {
+.form__checkbox-wrapper i {
   padding: 0;
   margin: 0;
   color: #ffffff;
@@ -3207,7 +3215,7 @@ button,
   margin-bottom: 18px;
 }
 
-.form-modal__form-input-container p {
+.form-modal__form-input-container i {
   color: #484848;
 }
 
@@ -3227,7 +3235,7 @@ button,
   background-color: rgba(169, 175, 183, 0.2);
 }
 
-.form-modal__form-input-container textarea:disabled ~ p {
+.form-modal__form-input-container textarea:disabled ~ i {
   opacity: 0.6;
 }
 
@@ -3247,7 +3255,7 @@ button,
   background-color: rgba(169, 175, 183, 0.2);
 }
 
-.form-modal__text-input-wrapper input:disabled ~ p {
+.form-modal__text-input-wrapper input:disabled ~ i {
   opacity: 0.6;
 }
 
@@ -3258,6 +3266,7 @@ button,
 .form-modal__checkbox-wrapper input {
   -webkit-box-shadow: inset 0 0 0 1px #316dc2;
   box-shadow: inset 0 0 0 1px #316dc2;
+  cursor: pointer;
 }
 
 .form-modal__checkbox-wrapper input:checked {
@@ -4484,6 +4493,22 @@ button,
   opacity: 1;
 }
 
+.pagination-bullet--news:hover,
+.pagination-bullet--news:focus-visible {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: inset 0 0 0 1px #316dc2;
+  box-shadow: inset 0 0 0 1px #316dc2;
+  outline: none;
+  opacity: 1;
+  color: #316dc2;
+}
+
+.pagination-bullet--news:active {
+  background-color: #275699;
+  color: #ffffff;
+  opacity: 1;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -5623,7 +5648,7 @@ button,
     letter-spacing: -0.4px;
   }
 
-  .form__form-input-container p {
+  .form__form-input-container i {
     font-size: 12px;
     line-height: 14px;
     margin-bottom: 11px;
@@ -5637,7 +5662,7 @@ button,
     margin-bottom: 30px;
   }
 
-  .form__checkbox-wrapper p {
+  .form__checkbox-wrapper i {
     line-height: 14px;
   }
 
