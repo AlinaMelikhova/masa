@@ -282,6 +282,7 @@
     &:checked:not(:disabled):hover,
     &:checked:not(:disabled):focus-visible {
       background: $color-transparent;
+      outline: none;
 
       &::before {
         background-image: url("../img/svg/checkbox-white.svg");
@@ -291,6 +292,7 @@
     &:not(:disabled):hover,
     &:not(:disabled):focus-visible {
       box-shadow: inset 0 0 0 1px $color-default-white;
+      outline: none;
     }
 
     &:disabled {

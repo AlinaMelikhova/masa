@@ -13,7 +13,7 @@
 
 .contacts__title-wrapper {
   display: flex;
-  padding-bottom: 33px;
+  padding-bottom: 13px;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -26,7 +26,7 @@
   h2 {
     color: $color-default-white;
     line-height: 100%;
-    margin-top: -8px;
+    margin-top: -28px;
 
     @include vp-1200 {
       margin-bottom: 37px;
@@ -56,14 +56,17 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  max-width: 80%;
 
   @include vp-767 {
     display: block;
+    max-width: 100%;
   }
 }
 
 .contacts__item {
   margin-right: 51px;
+  margin-bottom: 20px;
 
   @include vp-1200 {
     margin-right: 86px;

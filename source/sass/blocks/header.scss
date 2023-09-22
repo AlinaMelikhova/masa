@@ -34,6 +34,7 @@
   &:focus-visible,
   &:active {
     opacity: 0.8;
+    outline: 0;
   }
 
   &:active {
@@ -95,6 +96,11 @@
     @include vp-1200 {
       width: 100%;
     }
+  }
+
+  &:focus-visible {
+    opacity: 0.8;
+    outline: none;
   }
 }
 

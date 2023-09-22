@@ -74,6 +74,7 @@
   cursor: pointer;
   background-color: $color-transparent;
   opacity: 0.6;
+  border-radius: 20px;
 
   @include vp-1200 {
     padding: 12px 19px;
@@ -92,8 +93,10 @@
   }
 
   &:hover,
-  &:focus-visible {
+  &:focus-visible,
+  &:focus-within {
     opacity: 1;
+    outline: none;
   }
 }
 

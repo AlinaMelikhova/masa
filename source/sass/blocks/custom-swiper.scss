@@ -202,6 +202,12 @@
     &:last-child {
       margin-right: 0;
     }
+
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      outline: none;
+    }
   }
 
   &--news {

@@ -1543,6 +1543,22 @@ button,
     margin-left: 21px;
   }
 }
+.arrow-button:hover, .arrow-button:not(.arrow-button--disabled):focus-visible, .arrow-button:not(.arrow-button--disabled):focus-within {
+  background-color: #ffffff;
+  background-image: url("../img/svg/arrow-right.svg");
+  background-size: 12px 12px;
+  outline: none;
+}
+.arrow-button:not(.arrow-button--disabled):active {
+  opacity: 1;
+  background-color: #ffffff;
+  background-image: url("../img/svg/arrow-right-active.svg");
+}
+.arrow-button--disabled {
+  opacity: 1;
+  background-color: #a9afb7;
+  background-image: url("../img/svg/arrow-up-disabled.svg");
+}
 
 .primary-button:not(.primary-button--disabled):hover,
 .primary-button:not(.primary-button--disabled):focus-visible {
@@ -1674,6 +1690,7 @@ button,
 }
 .header__logo:hover, .header__logo:focus-visible, .header__logo:active {
   opacity: 0.8;
+  outline: 0;
 }
 .header__logo:active {
   opacity: 0.6;
@@ -1735,6 +1752,10 @@ button,
   .header__menu-button--opened {
     width: 100%;
   }
+}
+.header__menu-button:focus-visible {
+  opacity: 0.8;
+  outline: none;
 }
 
 .header__menu-wraper {
@@ -3043,6 +3064,7 @@ button,
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0);
   opacity: 0.6;
+  border-radius: 20px;
 }
 @media (max-width: 1199px) {
   .news__tabs-button {
@@ -3062,8 +3084,9 @@ button,
           box-shadow: 0 0 0 1px #316dc2;
   opacity: 1;
 }
-.news__tabs-button:hover, .news__tabs-button:focus-visible {
+.news__tabs-button:hover, .news__tabs-button:focus-visible, .news__tabs-button:focus-within {
   opacity: 1;
+  outline: none;
 }
 
 @media (max-width: 767px) {
@@ -3648,13 +3671,13 @@ button,
 .faq__item-wrapper:hover, .faq__item-wrapper:focus-visible, .faq__item-wrapper:focus-within {
   background-color: #ffffff;
 }
-.faq__item-wrapper:hover .faq__button:not(:disabled), .faq__item-wrapper:focus-visible .faq__button:not(:disabled) {
+.faq__item-wrapper:hover button:not(:disabled), .faq__item-wrapper:focus-within button:not(:disabled), .faq__item-wrapper:focus-visible button:not(:disabled) {
   outline: none;
   background-color: rgba(255, 255, 255, 0);
   -webkit-box-shadow: inset 0 0 0 1px #316dc2;
           box-shadow: inset 0 0 0 1px #316dc2;
 }
-.faq__item-wrapper:hover .faq__button:not(:disabled)::before, .faq__item-wrapper:hover .faq__button:not(:disabled)::after, .faq__item-wrapper:focus-visible .faq__button:not(:disabled)::before, .faq__item-wrapper:focus-visible .faq__button:not(:disabled)::after {
+.faq__item-wrapper:hover button:not(:disabled)::before, .faq__item-wrapper:hover button:not(:disabled)::after, .faq__item-wrapper:focus-within button:not(:disabled)::before, .faq__item-wrapper:focus-within button:not(:disabled)::after, .faq__item-wrapper:focus-visible button:not(:disabled)::before, .faq__item-wrapper:focus-visible button:not(:disabled)::after {
   background-color: #316dc2;
 }
 .faq__item-wrapper:active h3 {
@@ -3695,6 +3718,7 @@ button,
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  outline: none;
   cursor: pointer;
 }
 .faq__button::after {
@@ -3731,12 +3755,14 @@ button,
 }
 
 .faq__item.is-active > .faq__item-wrapper:hover,
+.faq__item.is-active > .faq__item-wrapper:focus-within,
 .faq__item.is-active > .faq__item-wrapper:focus-visible {
   background-color: #316dc2;
 }
 
 .faq__item.is-active > .faq__item-wrapper:hover button:not(:disabled),
-.faq__item.is-active > .faq__item-wrapper:focus-visible button:not(:disabled) {
+.faq__item.is-active > .faq__item-wrapper:focus-visible button:not(:disabled),
+.faq__item.is-active > .faq__item-wrapper:focus-within button:not(:disabled) {
   outline: none;
   background-color: rgba(255, 255, 255, 0);
   -webkit-box-shadow: inset 0 0 0 1px #ffffff;
@@ -3744,7 +3770,9 @@ button,
 }
 .faq__item.is-active > .faq__item-wrapper:hover button:not(:disabled)::before, .faq__item.is-active > .faq__item-wrapper:hover button:not(:disabled)::after,
 .faq__item.is-active > .faq__item-wrapper:focus-visible button:not(:disabled)::before,
-.faq__item.is-active > .faq__item-wrapper:focus-visible button:not(:disabled)::after {
+.faq__item.is-active > .faq__item-wrapper:focus-visible button:not(:disabled)::after,
+.faq__item.is-active > .faq__item-wrapper:focus-within button:not(:disabled)::before,
+.faq__item.is-active > .faq__item-wrapper:focus-within button:not(:disabled)::after {
   background-color: #ffffff;
 }
 
@@ -3796,6 +3824,7 @@ button,
 
 .faq__item.is-active button {
   background-color: #ffffff;
+  outline: none;
 }
 .faq__item.is-active button::after {
   width: 0;
@@ -4106,6 +4135,7 @@ button,
 }
 .form__checkbox-wrapper input:checked:not(:disabled):hover, .form__checkbox-wrapper input:checked:not(:disabled):focus-visible {
   background: rgba(255, 255, 255, 0);
+  outline: none;
 }
 .form__checkbox-wrapper input:checked:not(:disabled):hover::before, .form__checkbox-wrapper input:checked:not(:disabled):focus-visible::before {
   background-image: url("../img/svg/checkbox-white.svg");
@@ -4113,6 +4143,7 @@ button,
 .form__checkbox-wrapper input:not(:disabled):hover, .form__checkbox-wrapper input:not(:disabled):focus-visible {
   -webkit-box-shadow: inset 0 0 0 1px #ffffff;
           box-shadow: inset 0 0 0 1px #ffffff;
+  outline: none;
 }
 .form__checkbox-wrapper input:disabled {
   -webkit-box-shadow: inset 0 0 0 1px #ffffff;
@@ -4402,6 +4433,7 @@ button,
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  max-width: 100px;
 }
 @media (max-width: 1199px) {
   .reviews__card-photo-wrapper span {
@@ -4440,6 +4472,7 @@ button,
 
 .reviews__card-title-item {
   margin-right: 25px;
+  max-width: 130px;
 }
 .reviews__card-title-item:last-child {
   margin: 0;
@@ -4547,7 +4580,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 33px;
+  padding-bottom: 13px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -4565,7 +4598,7 @@ button,
 .contacts__title-wrapper h2 {
   color: #ffffff;
   line-height: 100%;
-  margin-top: -8px;
+  margin-top: -28px;
 }
 @media (max-width: 1199px) {
   .contacts__title-wrapper h2 {
@@ -4598,15 +4631,18 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 80%;
 }
 @media (max-width: 767px) {
   .contacts__list {
     display: block;
+    max-width: 100%;
   }
 }
 
 .contacts__item {
   margin-right: 51px;
+  margin-bottom: 20px;
 }
 @media (max-width: 1199px) {
   .contacts__item {
@@ -4789,6 +4825,7 @@ button,
 }
 .footer__logo:hover, .footer__logo:focus-visible {
   opacity: 0.8;
+  outline: none;
 }
 .footer__logo:active {
   opacity: 0.6;
@@ -5164,11 +5201,11 @@ button,
 }
 .modal__close-btn {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 18px;
+  right: 18px;
   z-index: 1;
-  width: 22px;
-  height: 22px;
+  width: 46px;
+  height: 46px;
   padding: 0;
   background: rgba(255, 255, 255, 0);
   border: none;
@@ -5642,6 +5679,9 @@ button,
 }
 .pagination-bullet--hero:last-child {
   margin-right: 0;
+}
+.pagination-bullet--hero:focus, .pagination-bullet--hero:focus-visible, .pagination-bullet--hero:focus-within {
+  outline: none;
 }
 .pagination-bullet--news {
   background-color: rgba(255, 255, 255, 0);

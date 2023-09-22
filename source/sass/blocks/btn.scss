@@ -61,6 +61,27 @@
   @include vp-1200 {
     margin-left: 21px;
   }
+
+  &:hover,
+  &:not(.arrow-button--disabled):focus-visible,
+  &:not(.arrow-button--disabled):focus-within {
+    background-color: $color-default-white;
+    background-image: url("../img/svg/arrow-right.svg");
+    background-size: 12px 12px;
+    outline: none;
+  }
+
+  &:not(.arrow-button--disabled):active {
+    opacity: 1;
+    background-color: $color-default-white;
+    background-image: url("../img/svg/arrow-right-active.svg");
+  }
+
+  &--disabled {
+    opacity: 1;
+    background-color: $color-disabled;
+    background-image: url("../img/svg/arrow-up-disabled.svg");
+  }
 }
 
 .primary-button:not(.primary-button--disabled):hover,
