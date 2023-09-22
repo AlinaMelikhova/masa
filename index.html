@@ -15,12 +15,6 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
     <link rel="stylesheet" href="css/style.min.css" />
     <link
       rel="preload"
@@ -1717,7 +1711,6 @@
                               required
                             />
                             <i>Имя</i>
-                            <span></span>
                           </label>
                           <label
                             for="user-tel-number"
@@ -1733,7 +1726,6 @@
                               required
                             />
                             <i>Телефон</i>
-                            <span></span>
                           </label>
                         </div>
                         <div class="form__message-wrapper">
@@ -1750,7 +1742,6 @@
                               required
                             ></textarea>
                             <i>Ваше сообщение</i>
-                            <span></span>
                           </label>
                         </div>
 
@@ -2007,7 +1998,6 @@
                       required
                     />
                     <i>Имя</i>
-                    <span></span>
                   </label>
                   <label
                     for="user-tel-number-modal"
@@ -2023,7 +2013,6 @@
                       required
                     />
                     <i>Телефон</i>
-                    <span></span>
                   </label>
                 </div>
 
@@ -2108,14 +2097,15 @@
             data-close-modal
           >
             <svg
+              class="header__menu-icon-cross"
               role="img"
               aria-label="cross."
-              width="20"
-              height="20"
+              width="46"
+              height="46"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
+              viewBox="0 0 46 46"
             >
-              <use xlink:href="img/sprite.svg#cross"></use>
+              <use href="./img/sprite.svg#cross" />
             </svg>
           </button>
         </div>
