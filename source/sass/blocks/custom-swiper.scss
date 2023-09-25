@@ -41,6 +41,13 @@
   @include vp-767 {
     display: none;
   }
+
+  &--programs {
+    @include vp-1200 {
+      width: 73%;
+      left: 45px;
+    }
+  }
 }
 
 .swiper-button-next,

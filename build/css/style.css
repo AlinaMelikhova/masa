@@ -2530,7 +2530,7 @@ button,
 }
 @media (max-width: 1199px) {
   .programs__container {
-    padding: 100px 0 101px;
+    padding: 105px 0 101px;
   }
 }
 @media (max-width: 767px) {
@@ -2568,8 +2568,8 @@ button,
 }
 @media (max-width: 1199px) {
   .programs__title-wrapper {
-    padding: 0;
-    margin-bottom: 40px;
+    padding: 0 45px;
+    margin-bottom: 35px;
   }
 }
 @media (max-width: 767px) {
@@ -2591,7 +2591,7 @@ button,
   .programs__button {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 15px;
     padding: 3px 4px 3px 30px;
   }
 }
@@ -4570,7 +4570,7 @@ button,
 }
 @media (max-width: 767px) {
   .reviews__card-title-wrapper {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -4660,6 +4660,11 @@ button,
   margin-right: 25px;
   max-width: 130px;
   padding: 10px 0;
+}
+@media (max-width: 767px) {
+  .reviews__card-title-item {
+    padding: 0 0 10px;
+  }
 }
 .reviews__card-title-item:last-child {
   margin: 0;
@@ -5708,6 +5713,12 @@ button,
 @media (max-width: 767px) {
   .swiper-scrollbar {
     display: none;
+  }
+}
+@media (max-width: 1199px) {
+  .swiper-scrollbar--programs {
+    width: 73%;
+    left: 45px;
   }
 }
 
