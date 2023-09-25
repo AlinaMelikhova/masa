@@ -66,9 +66,13 @@
 
     background-color: $color-default-white;
 
+    @include vp-1200 {
+      padding-top: 57px;
+    }
+
     @include vp-767 {
       width: 100%;
-      padding: 36px 13px;
+      padding: 36px 13px 40px;
     }
   }
 
@@ -88,6 +92,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include vp-767 {
+      width: 38px;
+      height: 45px;
+      top: 6px;
+      right: 8px;
+    }
   }
 
   &--responsive {

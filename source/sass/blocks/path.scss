@@ -13,16 +13,9 @@
 
 .path__wrapper {
   display: flex;
-  justify-content: space-between;
-  padding-right: 206px;
 
   @include vp-1200 {
-    padding-right: 45px;
     display: block;
-  }
-
-  @include vp-767 {
-    padding-right: 15px;
   }
 }
 
@@ -32,6 +25,7 @@
 
   &:last-child {
     width: 498px;
+    margin-left: 136px;
   }
 
   @include vp-1200 {
@@ -39,6 +33,7 @@
 
     &:last-child {
       width: 100%;
+      margin-left: 0;
     }
   }
 
@@ -165,7 +160,7 @@
     padding: 18px 25px;
   }
 
-  p {
+& > p {
     padding: 0;
     margin: 0;
     color: $color-light;
@@ -181,6 +176,7 @@
 
     @include vp-767 {
       font-size: 13px;
+      margin-bottom: 0;
     }
   }
 
