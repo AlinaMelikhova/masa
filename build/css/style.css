@@ -5716,6 +5716,7 @@ button,
   bottom: 5px;
   width: 22px;
   height: 22px;
+  padding: 0;
   background-color: rgba(255, 255, 255, 0);
   border: none;
   z-index: 10;
@@ -5745,6 +5746,7 @@ button,
 .swiper-button-prev--programs {
     top: 22px;
     bottom: auto;
+    display: block;
   }
 }
 .swiper-button-next svg,
