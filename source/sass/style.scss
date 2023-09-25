@@ -11,7 +11,6 @@
 // Global
 // ---------------------------------
 
-@import "blocks/btn";
 @import "variables";
 @import "mixins";
 @import "global/fonts";
@@ -20,6 +19,7 @@
 @import "global/container";
 
 // Blocks
+@import "blocks/btn";
 @import "blocks/header";
 @import "blocks/hero";
 @import "blocks/about";
