@@ -45,8 +45,8 @@ export class Form {
         .querySelectorAll('.is-valid')
         .forEach((item) => item.classList.remove('is-valid'));
     form.querySelectorAll('.input-message').forEach((item) => item.remove());
-    form.querySelectorAll('input[type="button"]').forEach((item) => {
-      item.value = '';
+    form.querySelectorAll('button[type="button"] span').forEach((item) => {
+      item.innerText = '';
     });
     setTimeout(() => {
       this._resetSelects(form);
