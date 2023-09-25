@@ -168,6 +168,11 @@ export class Modals {
       this._addListeners(modal);
       this._autoPlay(modal);
       document.addEventListener('click', this._documentClickHandler);
+
+      const firstInput = modal.querySelector('input');
+      if (firstInput) {
+        firstInput.focus();
+      }
     }, this._eventTimeout);
   }
 
