@@ -5731,6 +5731,12 @@ button,
   min-height: 46px;
   max-width: 46px;
   max-height: 46px;
+  margin-left: 30px;
+}
+@media (max-width: 1199px) {
+  .primary-button .arrow-button {
+    margin-left: 21px;
+  }
 }
 @media (max-width: 767px) {
   .primary-button .arrow-button {
@@ -5742,7 +5748,6 @@ button,
 }
 
 .arrow-button {
-  margin-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5758,11 +5763,6 @@ button,
   background-image: url("../img/svg/arrow-up.svg");
   background-size: 10px 10px;
   background-position: center;
-}
-@media (max-width: 1199px) {
-  .arrow-button {
-    margin-left: 21px;
-  }
 }
 .arrow-button:hover, .arrow-button:not(.arrow-button--disabled):focus-visible, .arrow-button:not(.arrow-button--disabled):focus-within {
   background-color: #ffffff;

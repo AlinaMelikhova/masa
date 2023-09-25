@@ -36,6 +36,11 @@
     min-height: 46px;
     max-width: 46px;
     max-height: 46px;
+    margin-left: 30px;
+
+    @include vp-1200 {
+      margin-left: 21px;
+    }
 
     @include vp-767 {
       min-width: 34px;
@@ -47,7 +52,6 @@
 }
 
 .arrow-button {
-  margin-left: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,10 +61,6 @@
   background-image: url("../img/svg/arrow-up.svg");
   background-size: 10px 10px;
   background-position: center;
-
-  @include vp-1200 {
-    margin-left: 21px;
-  }
 
   &:hover,
   &:not(.arrow-button--disabled):focus-visible,
