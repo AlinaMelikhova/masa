@@ -4312,6 +4312,9 @@ button,
   opacity: 0.6;
 }
 
+.form-modal__text-input-wrapper label {
+  margin-bottom: 16px;
+}
 @media (max-width: 1199px) {
   .form-modal__text-input-wrapper label {
     margin-bottom: 16px;
@@ -4342,6 +4345,9 @@ button,
   }
 }
 
+.form-modal__select {
+  margin-bottom: 19px;
+}
 @media (max-width: 1199px) {
   .form-modal__select {
     margin-bottom: 21px;
@@ -4397,10 +4403,12 @@ button,
 .form-modal__checkbox-wrapper p {
   color: #484848;
 }
+.form-modal__checkbox-wrapper i {
+  margin-bottom: 0;
+}
 @media (max-width: 767px) {
   .form-modal__checkbox-wrapper i {
     font-size: 11px;
-    margin-bottom: 0;
   }
 }
 
