@@ -4940,6 +4940,8 @@ button,
   height: 500px;
   border-radius: 16px;
   margin-top: 40px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 @media (max-width: 1199px) {
   .contacts__map-wrapper {
