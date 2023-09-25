@@ -266,3 +266,11 @@
     }
   }
 }
+
+.swiper-slide .news__link-icon {
+  visibility: hidden;
+}
+
+.swiper-slide.news__item--visible .news__link-icon {
+  visibility: visible;
+}
