@@ -5726,7 +5726,7 @@ button,
     letter-spacing: 0.24px;
   }
 }
-.primary-button .arrow-button {
+.primary-button > .arrow-button {
   min-width: 46px;
   min-height: 46px;
   max-width: 46px;
@@ -5734,12 +5734,12 @@ button,
   margin-left: 30px;
 }
 @media (max-width: 1199px) {
-  .primary-button .arrow-button {
+  .primary-button > .arrow-button {
     margin-left: 21px;
   }
 }
 @media (max-width: 767px) {
-  .primary-button .arrow-button {
+  .primary-button > .arrow-button {
     min-width: 34px;
     min-height: 34px;
     max-width: 34px;
