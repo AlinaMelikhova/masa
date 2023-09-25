@@ -4263,10 +4263,10 @@ button,
   min-height: 46px;
   max-width: 46px;
   max-height: 46px;
+  margin-left: 30px;
 }
 
 .arrow-button {
-  margin-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5090,7 +5090,7 @@ button,
     right: 45px;
   }
 
-  .arrow-button {
+  .primary-button .arrow-button {
     margin-left: 21px;
   }
 }
