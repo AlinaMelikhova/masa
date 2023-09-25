@@ -66,6 +66,8 @@
 .form-modal__text-input-wrapper {
 
   label {
+    margin-bottom: 16px;
+
     @include vp-1200 {
       margin-bottom: 16px;
     }
@@ -101,6 +103,8 @@
 }
 
 .form-modal__select {
+  margin-bottom: 19px;
+
   @include vp-1200 {
     margin-bottom: 21px;
   }
@@ -165,9 +169,10 @@
   }
 
   i {
+    margin-bottom: 0;
+
     @include vp-767 {
       font-size: 11px;
-      margin-bottom: 0;
     }
   }
 }
