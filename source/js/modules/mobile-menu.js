@@ -38,6 +38,7 @@ const showMenu = () => {
   menuExpandedLinks.forEach((link) => {
     link.addEventListener('click', menuInnerLinksHandler);
   });
+  mainPage.addEventListener('click', hideMenu);
 };
 
 const hideMenu = () => {
@@ -48,16 +49,15 @@ const hideMenu = () => {
   menuExpandedLinks.forEach((link) => {
     link.removeEventListener('click', menuInnerLinksHandler);
   });
+  mainPage.removeEventListener('click', hideMenu);
 };
 
 export const handleMobileMenu = () => {
   menuToggleButton.addEventListener('click', () => {
     if (pageWrapper.classList.contains('page-wrapper--menu-opened')) {
       hideMenu();
-      mainPage.removeEventListener('click', hideMenu);
     } else {
       showMenu();
-      mainPage.addEventListener('click', hideMenu);
     }
   });
 };
