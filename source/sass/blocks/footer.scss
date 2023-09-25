@@ -241,6 +241,7 @@
   position: absolute;
   right: 0;
   top: -72px;
+  max-width: 20%;
 
   @include vp-1200 {
     position: static;

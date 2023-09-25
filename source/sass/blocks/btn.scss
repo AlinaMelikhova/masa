@@ -7,6 +7,7 @@
   border-radius: 30px;
   border: 1px solid $color-bright;
   background-color: $color-transparent;
+  user-select: none;
 
   @include vp-767 {
     padding: 3px 4px 3px 20px;
