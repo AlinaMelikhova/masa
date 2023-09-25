@@ -2018,6 +2018,12 @@ button,
     padding: 29px 40px 24px 40px;
   }
 }
+@media (max-width: 767px) {
+  .hero__block-wrapper--trainee h2 {
+    letter-spacing: -0.6px;
+    padding: 20px 13px 16px;
+  }
+}
 
 .hero__description-wrapper {
   background-color: #ffffff;
@@ -2104,7 +2110,7 @@ button,
     background-color: #ffffff;
     margin: 0;
     border-radius: 0 0 14px 0;
-    max-width: 90%;
+    max-width: 100%;
     font-size: 13px;
     margin-top: -5px;
     min-width: auto;
@@ -2141,8 +2147,23 @@ button,
     padding: 0 40px 25px 40px;
   }
 }
+@media (max-width: 767px) {
+  .hero__description-wrapper--trainee {
+    padding: 0;
+  }
+}
 .hero__description-wrapper--trainee p {
   margin-right: 35px;
+}
+@media (max-width: 1199px) {
+  .hero__description-wrapper--trainee p {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .hero__description-wrapper--trainee p {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -2189,6 +2210,11 @@ button,
 @media (max-width: 767px) {
   .hero__button-wrapper a {
     margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .hero__button-wrapper--trainee {
+    padding: 14px 15px 10px;
   }
 }
 @media (max-width: 1199px) {
@@ -4350,7 +4376,7 @@ button,
 }
 @media (max-width: 1199px) {
   .form-modal__select {
-    margin-bottom: 21px;
+    margin-bottom: 18px;
   }
 }
 @media (max-width: 767px) {
