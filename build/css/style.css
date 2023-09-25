@@ -3936,6 +3936,11 @@ button,
 .form__select {
   margin-bottom: 21px;
 }
+@media (max-width: 1199px) {
+  .form__select {
+    margin-bottom: 19px;
+  }
+}
 
 .form__checkbox-wrapper {
   margin-bottom: 40px;
@@ -4023,6 +4028,7 @@ button,
 @media (max-width: 767px) {
   .form__checkbox-wrapper i {
     line-height: 14px;
+    margin: 0;
   }
 }
 
@@ -5735,7 +5741,7 @@ button,
 }
 @media (max-width: 1199px) {
   .primary-button > .arrow-button {
-    margin-left: 21px;
+    margin-left: 31px;
   }
 }
 @media (max-width: 767px) {
@@ -5744,6 +5750,7 @@ button,
     min-height: 34px;
     max-width: 34px;
     max-height: 34px;
+    margin-left: 21px;
   }
 }
 
