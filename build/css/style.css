@@ -2568,8 +2568,7 @@ button,
     padding: 3px 4px 3px 30px;
   }
 }
-
-.programs__link-icon-button {
+.programs__button > .programs__link-icon-button {
   margin-left: 32px;
 }
 
