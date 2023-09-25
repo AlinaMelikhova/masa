@@ -1890,6 +1890,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-position: center;
 }
 @media (max-width: 1199px) {
   .hero__container {
@@ -2636,6 +2637,7 @@ button,
     padding: 18px 10px;
     width: 100%;
     min-height: 400px;
+    background-position-y: 30%;
   }
 }
 .programs__item::before {
@@ -3232,6 +3234,7 @@ button,
     padding: 27px 27px 0 0;
     height: 240px;
     min-height: 240px;
+    background-position-y: 30%;
   }
 }
 .news__item:last-child {
@@ -4325,6 +4328,7 @@ button,
 }
 .form-modal__form-input-container textarea {
   border: 1px solid rgba(72, 72, 72, 0.3);
+  color: #484848;
 }
 .form-modal__form-input-container textarea:not(:disabled):hover, .form-modal__form-input-container textarea:not(:disabled):focus-visible, .form-modal__form-input-container textarea:not(:disabled):active {
   border: 1px solid #484848;
@@ -4353,6 +4357,7 @@ button,
 }
 .form-modal__text-input-wrapper input {
   border: 1px solid rgba(72, 72, 72, 0.3);
+  color: #484848;
 }
 .form-modal__text-input-wrapper input:not(:disabled):hover, .form-modal__text-input-wrapper input:not(:disabled):focus-visible, .form-modal__text-input-wrapper input:not(:disabled):active {
   border: 1px solid #484848;
@@ -4555,9 +4560,13 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin-bottom: 25px;
+}
+@media (max-width: 1199px) {
+  .reviews__card-title-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 @media (max-width: 767px) {
   .reviews__card-title-wrapper {
@@ -4587,12 +4596,18 @@ button,
     margin-bottom: 13px;
   }
 }
-.reviews__card-photo-wrapper img {
+.reviews__card-photo-wrapper .reviews__image-container {
   margin-right: 15px;
 }
 @media (max-width: 767px) {
-  .reviews__card-photo-wrapper img {
+  .reviews__card-photo-wrapper .reviews__image-container {
     margin-right: 10px;
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .reviews__card-photo-wrapper img {
     width: 60px;
     height: 60px;
   }
@@ -4644,6 +4659,7 @@ button,
 .reviews__card-title-item {
   margin-right: 25px;
   max-width: 130px;
+  padding: 10px 0;
 }
 .reviews__card-title-item:last-child {
   margin: 0;

@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   box-sizing: border-box;
   display: flex;
+  background-position: center;
 
   @include vp-1200 {
     min-height: 1024px;
