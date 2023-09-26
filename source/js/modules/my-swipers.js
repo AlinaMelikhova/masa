@@ -39,10 +39,9 @@ const initNewsSwiper = () => {
     slideVisibleClass: 'news__item--visible',
     speed: 300,
     slidesPerView: 1,
-    spaceBetween: 20,
+    spaceBetween: null,
     grid: {
       rows: 2,
-      fill: 'column',
     },
 
     pagination: {
