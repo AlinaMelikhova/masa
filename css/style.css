@@ -2604,6 +2604,7 @@ button,
   margin: 0;
   list-style-type: none;
   margin-bottom: 59px;
+  background: #f0efe9;
 }
 @media (max-width: 767px) {
   .programs__list {
@@ -2638,6 +2639,8 @@ button,
     width: 100%;
     min-height: 400px;
     aspect-ratio: 290/400;
+    border-radius: 3%;
+    overflow: hidden;
   }
 }
 .programs__item::before {
@@ -3236,6 +3239,7 @@ button,
     height: auto;
     min-height: 240px;
     aspect-ratio: 290/240;
+    border-radius: 4%;
   }
 }
 .news__item:last-child {
